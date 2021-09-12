@@ -1,0 +1,38 @@
+---
+title: "APOENA DADOS"
+subtitle: "Informações sobre a Lei Aldir Blanc"
+author: "APOENA"
+date: '12 de setembro de 2021'
+output: 
+  cleanrmd::html_document_clean:
+    theme: new
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Mapas da Lei Aldir Blanc
+
+Mapa do percentual de execução da Lei Aldir Blanc no estado do Rio de Janeiro.    
+Legenda:    
+  Amarelo: execução abaixo da média    
+  Laranja: execução acima da média    
+  Cinza: informação não disponível    
+
+- [RJ por município](mapa1/mapa_01.html)
+
+Mapa do percentual de execução da Lei Aldir Blanc por região 
+
+(versão preliminar - verificar a mudança do CEPERJ)
+
+- [RJ por região](mapa2/mapa_reg_01.html)
+
+## Gráficos
+
+- [em breve](https://labacuff.wordpress.com/)
+
+## Outros links
+
+- [LABAC UFF](https://labacuff.wordpress.com/)
+
