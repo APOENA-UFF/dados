@@ -63,7 +63,7 @@ header {
   height: 200px;
   line-height: 200px;
   text-align: center;
-  background: #303e49;
+  background: #094570;
 }
 header h1 {
   color: #ffffff;
@@ -155,7 +155,8 @@ header h1 {
   margin-top: -12px;
 }
 .cd-timeline-img.cd-picture {
-  background: #75ce66;
+  background: #3d7dca;
+  /*background: #75ce66;*/
 }
 .cd-timeline-img.cd-movie {
   background: #c03b44;
@@ -265,7 +266,7 @@ header h1 {
 .cd-timeline-content .cd-read-more {
   float: right;
   padding: 0.8em 1em;
-  background: #acb7c0;
+  background: #094570;
   color: #ffffff;
   border-radius: 0.25em;
 }

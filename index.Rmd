@@ -1,7 +1,7 @@
 ---
 title: "APOENA DADOS"
 subtitle: "Informações sobre a Lei Aldir Blanc"
-author: "APOENA"
+author: "[APOENA](https://apoenaredecultural.wordpress.com/)"
 date: '12 de setembro de 2021'
 output: 
   cleanrmd::html_document_clean:
@@ -9,8 +9,14 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
+
 ```
+
+## Linha do Tempo
+
+- [Linha do Tempo](https://apoena-uff.github.io/dados/linha-tempo/)
+
 
 ## Mapas da Lei Aldir Blanc
 
@@ -33,6 +39,8 @@ Mapa do percentual de execução da Lei Aldir Blanc por região
 - [em breve](https://labacuff.wordpress.com/)
 
 ## Outros links
+
+- [APOENA](https://apoenaredecultural.wordpress.com/)
 
 - [LABAC UFF](https://labacuff.wordpress.com/)
 
