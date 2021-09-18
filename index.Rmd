@@ -20,6 +20,14 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Mapas da Lei Aldir Blanc
 
+#### Fonte: CNM
+
+Mapa do valor total repassado
+- [Brasil por UF](mapa_cnm_uf/mapa_01.html)
+
+
+#### Fonte: EPCult
+
 Mapa do percentual de execução da Lei Aldir Blanc no estado do Rio de Janeiro.    
 Legenda:    
   Amarelo: execução abaixo da média    
