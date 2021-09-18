@@ -13,12 +13,12 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
-## Linha do Tempo
+# Linha do Tempo
 
 - [Linha do Tempo](https://apoena-uff.github.io/dados/linha-tempo/)
 
 
-## Mapas da Lei Aldir Blanc
+# Mapas
 
 #### Fonte: CNM
 
@@ -42,7 +42,7 @@ Mapa do percentual de execução da Lei Aldir Blanc por região
 
 - [RJ por região](mapa2/mapa_reg_01.html)
 
-## Gráficos
+# Gráficos
 
 - [em breve](https://labacuff.wordpress.com/)
 
