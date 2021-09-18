@@ -2,7 +2,7 @@
 title: "APOENA DADOS"
 subtitle: "Informações sobre a Lei Aldir Blanc"
 author: "[APOENA](https://apoenaredecultural.wordpress.com/)"
-date: '12 de setembro de 2021'
+date: "12 de setembro de 2021: <br><br>   última atualização: <br> `r format(Sys.Date(), '%d de %B de %Y')`"
 output: 
   cleanrmd::html_document_clean:
     theme: new
