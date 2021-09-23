@@ -26,6 +26,18 @@ library(flexdashboard)
 #131925 preto
 #c2d5db branco
 # Row {data-width=100}
+library(dplyr)
+library(ggplot2)
+library(plotly)
+library(waffle)
+library(janitor)
+library(readxl)
+BD_APOENA <- read_excel("base_de_dados/dados_para_mapa/Clarissa/base de dados APOENA 18-09-2021.xlsx", 
+                        sheet = "base geral (steven) ") %>% clean_names()
+
+dic_dados_LAB <- read_excel("base_de_dados/dados_para_mapa/Clarissa/base de dados APOENA 18-09-2021.xlsx", 
+                            sheet = "notas tecnicas") %>% clean_names()
+
 ```
 
 Informações básicas
@@ -35,43 +47,51 @@ Informações básicas
 Value Boxes {data-width=200}
 -------------------------------------
 
+### Valor total
+
+```{r}
+#
+
+valueBox(format(sum(BD_APOENA$valor_total,na.rm = T),big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Valor total", color = "info", icon = "fa-twitter")
+
+```
+
 ### Pagamentos realizados pela união
 
 ```{r}
-#sum(BD_APOENA$pagamentos_realizados_pela_uniao,na.rm = T)
-valueBox(1381664506, caption = "Pagamentos realizados pela união", icon = "fa-github")
+valueBox(format(sum(BD_APOENA$pagamentos_realizados_pela_uniao,na.rm = T),big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Pagamento realizados pela união", icon = "fa-github")
 ```
 
-### Info
+### Percentual de plano aprovado e pagamento
 
 ```{r}
-valueBox(2, caption = "info", color = "info", icon = "fa-twitter")
+#situacao_do_plano_e_pagamento
+valueBox(format(74.98,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Percentual de plano aprovado e pagamento", color = "lightgray", icon = "glyphicon-time")
 ```
 
-### Success
+### Saldo em conta plataforma de indicadores
 
 ```{r}
-valueBox(3, caption = "success", color = "success", icon = "glyphicon-time")
+valueBox(format(sum(BD_APOENA$saldo_em_conta_plataforma_de_indicadores,na.rm = T),big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Saldo em conta plataforma de indicadores", color = "warning", icon = "fa-facebook")
 ```
 
-### Warning
+### planos aprovados em 2020
 
 ```{r}
-valueBox(4, caption = "warning", color = "warning", icon = "fa-facebook")
+valueBox(format(4175,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "planos aprovados em 2020", color = "danger", icon = "fa-facebook")
 ```
 
-### Danger
+### planos aprovados em 2021
 
 ```{r}
-valueBox(5, caption = "danger", color = "danger", icon = "fa-facebook")
-```
 
-### Custom
-
-```{r}
-# TODO: why is there a linked value here?
-valueBox(
-  6, caption = "custom", color = "lightgray",
+valueBox(format(538,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "planos aprovados em 2021", color = "lightgray",
   icon = "fab fa-r-project"
 )
 ```
@@ -82,8 +102,11 @@ Row
 ### Scatter Chart with geom_point
 
 ```{r}
-#p <- ggplot(dat, aes(x=xvar, y=yvar)) +
-#            geom_point(shape=1)      
+#p <- ggplot(BD_APOENA) +
+#   aes(x = plano_aprovado_2021, colour = plano_aprovado_2021,fill=plano_aprovado_2021) +
+#   geom_bar() +
+#   scale_color_hue() +
+#   theme_minimal()
 #ggplotly(p)
 ```
 
