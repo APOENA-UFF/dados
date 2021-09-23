@@ -1,0 +1,111 @@
+---
+title: "LAB"
+output: 
+  flexdashboard::flex_dashboard:
+    theme:
+       bootswatch: journal
+       bg: "#c2d5db"
+       fg: "#1e698d"
+       primary: "#1e698d"
+       heading_font: 
+         google: Sen
+       base_font:
+         google: Sen
+       code_font:
+         google: JetBrains Mono
+    orientation: rows
+    vertical_layout: fill
+    navbar:
+      - { title: "APOENA", href: "https://apoenaredecultural.wordpress.com/", align: right, icon: glyphicon-time}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,message = FALSE, warning = FALSE,comment = NA)
+library(flexdashboard)
+#8abca7 verde
+#131925 preto
+#c2d5db branco
+# Row {data-width=100}
+```
+
+Informações básicas
+=============================================
+
+
+Value Boxes {data-width=200}
+-------------------------------------
+
+### Pagamentos realizados pela união
+
+```{r}
+#sum(BD_APOENA$pagamentos_realizados_pela_uniao,na.rm = T)
+valueBox(1381664506, caption = "Pagamentos realizados pela união", icon = "fa-github")
+```
+
+### Info
+
+```{r}
+valueBox(2, caption = "info", color = "info", icon = "fa-twitter")
+```
+
+### Success
+
+```{r}
+valueBox(3, caption = "success", color = "success", icon = "glyphicon-time")
+```
+
+### Warning
+
+```{r}
+valueBox(4, caption = "warning", color = "warning", icon = "fa-facebook")
+```
+
+### Danger
+
+```{r}
+valueBox(5, caption = "danger", color = "danger", icon = "fa-facebook")
+```
+
+### Custom
+
+```{r}
+# TODO: why is there a linked value here?
+valueBox(
+  6, caption = "custom", color = "lightgray",
+  icon = "fab fa-r-project"
+)
+```
+
+Row 
+---------------------------------------------
+
+### Scatter Chart with geom_point
+
+```{r}
+#p <- ggplot(dat, aes(x=xvar, y=yvar)) +
+#            geom_point(shape=1)      
+#ggplotly(p)
+```
+
+Row 
+---------------------------------------------
+
+
+### Chart B
+
+```{r}
+
+```
+
+### Chart C
+
+```{r}
+
+```
+
+
+Dicionário de dados
+=======================================================================
+
+
+Dicionário de dados, Fonte dos dados e algumas notas técnicas
