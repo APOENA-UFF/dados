@@ -15,6 +15,7 @@ output:
          google: JetBrains Mono
     orientation: rows
     vertical_layout: fill
+    social: [ "twitter", "facebook", "menu"]
     navbar:
       - { title: "APOENA", href: "https://apoenaredecultural.wordpress.com/", align: right, icon: glyphicon-time}
 ---
@@ -31,104 +32,280 @@ library(ggplot2)
 library(plotly)
 library(waffle)
 library(janitor)
-library(readxl)
-BD_APOENA <- read_excel("base_de_dados/dados_para_mapa/Clarissa/base de dados APOENA 18-09-2021.xlsx", 
-                        sheet = "base geral (steven) ") %>% clean_names()
-
-dic_dados_LAB <- read_excel("base_de_dados/dados_para_mapa/Clarissa/base de dados APOENA 18-09-2021.xlsx", 
-                            sheet = "notas tecnicas") %>% clean_names()
+library(rpivotTable)
+library(waffle)
+load('C:/Users/Hp/Documents/GitHub/Lei_Aldir_Blanc/base_de_dados/dados_para_mapa/Clarissa/BD_APOENA.RData')
+BD_APOENA_RJ <- BD_APOENA %>% filter(uf=='RJ')
 
 ```
+
+APOENA
+=============================================
+
+
+<p>
+<figure>
+<img src="olho-apoena.jpg" alt="Apresentação" class="center" style="width:800px;height:700px;"/>
+</figure> 
+<p/>
 
 Informações básicas
 =============================================
 
+Informações sobre o Brasil e o Rio de Janeiro
 
 Value Boxes {data-width=200}
 -------------------------------------
 
-### Valor total
+
+
+### Valor total - Brasil
 
 ```{r}
-#
-
 valueBox(format(sum(BD_APOENA$valor_total,na.rm = T),big.mark='.',
- small.mark=',',decimal.mark=','), caption = "Valor total", color = "info", icon = "fa-twitter")
+ small.mark=',',decimal.mark=','), caption = "Valor total- Brasil", color = "#2a4d69", icon = "fa-twitter")
+
 
 ```
 
-### Pagamentos realizados pela união
+### Valor total - Rio de Janeiro
 
 ```{r}
-valueBox(format(sum(BD_APOENA$pagamentos_realizados_pela_uniao,na.rm = T),big.mark='.',
- small.mark=',',decimal.mark=','), caption = "Pagamento realizados pela união", icon = "fa-github")
+valueBox(format(sum(BD_APOENA_RJ$valor_total,na.rm = T),big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Valor total - Rio de Janeiro", color = "#fe9c8f", icon = "fa-twitter")
+
 ```
 
-### Percentual de plano aprovado e pagamento
+Row
+---------------------------------------------
+
+
+### Pagamentos realizados pela união - Brasil
+
+```{r}
+
+valueBox(format(sum(BD_APOENA$pagamentos_realizados_pela_uniao,na.rm = T),big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Pagamento realizados pela união - Brasil", color = "#4b86b4", icon = "fa-github")
+
+
+```
+
+
+### Pagamentos realizados pela união - Rio de Janeiro
+
+```{r}
+
+valueBox(format(sum(BD_APOENA_RJ$pagamentos_realizados_pela_uniao,na.rm = T),big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Pagamento realizados pela união - Rio de Janeiro", color = "#feb2a8", icon = "fa-github")
+
+```
+
+
+Row
+---------------------------------------------
+
+
+### Percentual de plano aprovado e pagamento - Brasil
 
 ```{r}
 #situacao_do_plano_e_pagamento
 valueBox(format(74.98,big.mark='.',
- small.mark=',',decimal.mark=','), caption = "Percentual de plano aprovado e pagamento", color = "lightgray", icon = "glyphicon-time")
+ small.mark=',',decimal.mark=','), caption = "Percentual de plano aprovado e pagamento - BRASIL", color = "#adcbe3", icon = "glyphicon-time")
+#round(prop.table(table(BD_APOENA$situacao_do_plano_e_pagamento)),2)[1]
+
 ```
 
-### Saldo em conta plataforma de indicadores
+
+### Percentual de plano aprovado e pagamento - Rio de Janeiro
+
+```{r}
+#situacao_do_plano_e_pagamento
+valueBox(format(94.57,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Percentual de plano aprovado e pagamento - Rio de Janeiro", color = "#fec8c1", icon = "glyphicon-time")
+#round(prop.table(table(BD_APOENA$situacao_do_plano_e_pagamento)),2)[1]
+```
+
+
+Row
+---------------------------------------------
+
+### Saldo em conta plataforma de indicadores - Brasil
 
 ```{r}
 valueBox(format(sum(BD_APOENA$saldo_em_conta_plataforma_de_indicadores,na.rm = T),big.mark='.',
- small.mark=',',decimal.mark=','), caption = "Saldo em conta plataforma de indicadores", color = "warning", icon = "fa-facebook")
+ small.mark=',',decimal.mark=','), caption = "Saldo em conta plataforma de indicadores - Brasil", color = "#e7eff6", icon = "fa-facebook")
+
+
 ```
 
-### planos aprovados em 2020
+### Saldo em conta plataforma de indicadores - Rio de Janeiro
+
+```{r}
+valueBox(format(sum(BD_APOENA_RJ$saldo_em_conta_plataforma_de_indicadores,na.rm = T),big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Saldo em conta plataforma de indicadores - Rio de Janeiro", color = "#fad9c1", icon = "fa-facebook")
+```
+
+Row
+---------------------------------------------
+
+### planos aprovados em 2020 - Brasil
 
 ```{r}
 valueBox(format(4175,big.mark='.',
- small.mark=',',decimal.mark=','), caption = "planos aprovados em 2020", color = "danger", icon = "fa-facebook")
+ small.mark=',',decimal.mark=','), caption = "planos aprovados em 2020 - Brasil", color = "#63ace5", icon = "fa-facebook")
+
 ```
 
-### planos aprovados em 2021
+### planos aprovados em 2020 - Rio de Janeiro
+
+```{r}
+valueBox(format(87,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "planos aprovados em 2020 - Rio de Janeiro", color = "#f9caa7", icon = "fa-facebook")
+```
+
+
+Row
+--------------------------------------------
+
+### planos aprovados em 2021 - Brasil
 
 ```{r}
 
 valueBox(format(538,big.mark='.',
- small.mark=',',decimal.mark=','), caption = "planos aprovados em 2021", color = "lightgray",
+ small.mark=',',decimal.mark=','), caption = "planos aprovados em 2021 - Brasil", color = "skyblue",
   icon = "fab fa-r-project"
 )
 ```
 
-Row 
+
+### planos aprovados em 2021 - Rio de Janeiro
+
+```{r}
+
+valueBox(format(2,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "planos aprovados em 2021 - Rio de Janeiro", color = "#ffe9dc",
+  icon = "fab fa-r-project"
+)
+
+#009688 • #35a79c • #54b2a9 • #65c3ba • #83d0c9
+```
+
+
+
+Visualização interativa
+=======================================================================
+
+<br>
+<br>
+
+Row
 ---------------------------------------------
 
-### Scatter Chart with geom_point
-
 ```{r}
-#p <- ggplot(BD_APOENA) +
-#   aes(x = plano_aprovado_2021, colour = plano_aprovado_2021,fill=plano_aprovado_2021) +
-#   geom_bar() +
-#   scale_color_hue() +
-#   theme_minimal()
-#ggplotly(p)
+#Row {data-height=600}
+BD_APOENA$plano_aprovado_2021<-gsub(' \\(consta no comunicado 3, mas aprovou plano em 2020\\)','',BD_APOENA$plano_aprovado_2021)
+BD_APOENA$plano_aprovado_2021<-gsub('estado não possui saldo para restituição','OUTROS',BD_APOENA$plano_aprovado_2021)
+BD_APOENA$plano_aprovado_2021<-gsub('ERRO','OUTROS',BD_APOENA$plano_aprovado_2021)
+
+
+BD_APOENA_RJ %>%
+  count(plano_aprovado_2021) %>%
+  ggplot(aes(fill = plano_aprovado_2021, values = n)) +
+  geom_waffle(n_rows = 10, size = 0.33, colour = "white", flip = TRUE) +
+  scale_fill_manual(
+    name = NULL,
+    values = c("skyblue", "navy", "#a40000"),
+    labels = c("Aprovados em 2020", "Aprovado em 2021", "Não teve plano"))+
+  labs(title = "Situação dos planos dos municípios do Estado do Rio de Janeiro",
+       subtitle = "87 planos aprovados em 2020, 02 (dois) planos aprovado em 2021, e 03 (três) municipíos não tiveram plano",
+       caption = "Fonte dos dados: perguntar para Clarissa, processamento: APOENA") +
+  coord_equal() +
+  theme_minimal()+
+  theme_enhance_waffle()
+
 ```
 
-Row 
+
+
+```{r}
+ggplot(BD_APOENA_RJ) +
+ aes(x = valor_per_capita, fill = plano_aprovado_2021) +
+ geom_histogram(bins = 30L) +
+ scale_fill_viridis_d(option = "viridis") +
+ theme_minimal()
+```
+
+<br>
+<br>
+
+Row
 ---------------------------------------------
 
 
-### Chart B
-
 ```{r}
+ggplot(BD_APOENA_RJ) +
+ aes(x = data_do_deposito) +
+ geom_histogram(bins = 30L, fill = "#0c4c8a") +
+ theme_minimal()
 
 ```
 
-### Chart C
+
+<br>
+<br>
+
+Row
+---------------------------------------------
+
 
 ```{r}
+ggplot(BD_APOENA_RJ) +
+ aes(x = percent_em_saldo) +
+ geom_histogram(bins = 30L, fill = "#0c4c8a") +
+ theme_minimal()
 
 ```
 
+
+
+Tabela interativa
+=======================================================================
+
+<br>
+<br>
+<br>
+
+```{r}
+
+BD_APOENA_RJ %>% select(nome_do_municipio,
+valor_total,
+situacao_do_plano_e_pagamento,
+pagamentos_realizados_pela_uniao,   
+data_do_deposito,
+r_transferido_plataforma_indicadores,         
+saldo_em_conta_plataforma_de_indicadores,
+percent_em_saldo,
+percent_executado_implicito,
+valor_revertido_ao_gov_estadual,
+valor_real_executado_em_2020,
+percentual_real_executado_em_2020,           municipio_que_nao_recebeu_em_2020_e_pode_reivindicar_2021,
+percentual_previsto_para_reversao_dos_estados_aos_municipios,
+previsao_novo_valor_de_repasse,
+plano_aprovado_2021,             
+valor_per_capita) %>%
+rpivotTable(rendererName = "Heatmap",aggregatorName='First',rows = "nome_do_municipio",vals = "valor_per_capita")
+
+```
 
 Dicionário de dados
 =======================================================================
 
 
-Dicionário de dados, Fonte dos dados e algumas notas técnicas
+Dicionário de dados, Fonte dos dados e algumas notas técnicas.
+
+```{r}
+library(reactable)
+
+reactable(dic_dados_LAB[,1:3])
+```
+
