@@ -270,6 +270,7 @@ header h1 {
   color: #ffffff;
   border-radius: 0.25em;
 }
+
 .no-touch .cd-timeline-content .cd-read-more:hover {
   background-color: #bac4cb;
 }
@@ -464,3 +465,8 @@ header h1 {
     transform: translateX(0);
   }
 }
+
+
+#link { color: #47484f; }
+
+#ano {font-size: 50px; color: #47484f; }
