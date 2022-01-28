@@ -1,0 +1,195 @@
+---
+title: "LAB"
+output: 
+  flexdashboard::flex_dashboard:
+    theme:
+       bootswatch: journal
+       bg: "#c2d5db"
+       fg: "#1e698d"
+       primary: "#1e698d"
+       heading_font: 
+         google: Sen
+       base_font:
+         google: Sen
+       code_font:
+         google: JetBrains Mono
+    orientation: rows
+    vertical_layout: fill
+    social: [ "twitter", "facebook", "menu"]
+    navbar:
+      - { title: "APOENA", href: "https://apoenaredecultural.wordpress.com/", align: right, icon: glyphicon-time}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,message = FALSE, warning = FALSE,comment = NA)
+library(flexdashboard)
+#8abca7 verde
+#131925 preto
+#c2d5db branco
+# Row {data-width=100}
+library(dplyr)
+library(ggplot2)
+library(plotly)
+library(waffle)
+library(janitor)
+library(rpivotTable)
+library(waffle)
+load('C:/Users/Hp/Documents/GitHub/Lei_Aldir_Blanc/base_de_dados/dados_para_mapa/Clarissa/BD_APOENA.RData')
+BD_APOENA_RJ <- BD_APOENA %>% filter(uf=='RJ')
+
+```
+
+APOENA
+=============================================
+
+
+<p>
+<figure>
+<img src="olho-apoena.jpg" alt="Apresentação" class="center" style="width:800px;height:700px;"/>
+</figure> 
+<p/>
+
+Informações básicas
+=============================================
+
+Informações sobre o Brasil e o Rio de Janeiro
+
+Value Boxes {data-width=200}
+-------------------------------------
+
+
+
+### Valor total - Brasil
+
+```{r}
+valueBox(format(sum(BD_APOENA$valor_total,na.rm = T),big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Valor total- Brasil", color = "#FFC56C", icon = "fa-music")
+
+
+```
+
+### Valor total - Rio de Janeiro
+
+```{r}
+valueBox(format(sum(BD_APOENA_RJ$valor_total,na.rm = T),big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Valor total - Rio de Janeiro", color = "#FF5959", icon = "fa-music")
+
+```
+
+Row
+---------------------------------------------
+
+
+### Pagamentos realizados pela união - Brasil
+
+```{r}
+
+valueBox(format(sum(BD_APOENA$pagamentos_realizados_pela_uniao,na.rm = T),big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Pagamento realizados pela união - Brasil", color = "#FFC56C", icon = "fa-book-reader")
+
+
+```
+
+
+### Pagamentos realizados pela união - Rio de Janeiro
+
+```{r}
+
+valueBox(format(sum(BD_APOENA_RJ$pagamentos_realizados_pela_uniao,na.rm = T),big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Pagamento realizados pela união - Rio de Janeiro", color = "#FF5959", icon = "fa-book-reader")
+
+```
+
+
+Row
+---------------------------------------------
+
+
+### Percentual de plano aprovado e pagamento - Brasil
+
+```{r}
+#situacao_do_plano_e_pagamento
+valueBox(format(74.98,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Percentual de plano aprovado e pagamento - BRASIL", color = "#FFC56C", icon = "glyphicon-time")
+#round(prop.table(table(BD_APOENA$situacao_do_plano_e_pagamento)),2)[1]
+
+```
+
+
+### Percentual de plano aprovado e pagamento - Rio de Janeiro
+
+```{r}
+#situacao_do_plano_e_pagamento
+valueBox(format(94.57,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Percentual de plano aprovado e pagamento - Rio de Janeiro", color = "#FF5959", icon = "glyphicon-time")
+#round(prop.table(table(BD_APOENA$situacao_do_plano_e_pagamento)),2)[1]
+```
+
+
+Row
+---------------------------------------------
+
+### Saldo em conta plataforma de indicadores - Brasil
+
+```{r}
+valueBox(format(sum(BD_APOENA$saldo_em_conta_plataforma_de_indicadores,na.rm = T),big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Saldo em conta plataforma de indicadores - Brasil", color = "#FFC56C", icon = "fa-palette")
+
+
+```
+
+### Saldo em conta plataforma de indicadores - Rio de Janeiro
+
+```{r}
+valueBox(format(sum(BD_APOENA_RJ$saldo_em_conta_plataforma_de_indicadores,na.rm = T),big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Saldo em conta plataforma de indicadores - Rio de Janeiro", color = "#FF5959", icon = "fa-palette")
+```
+
+Row
+---------------------------------------------
+
+### planos aprovados em 2020 - Brasil
+
+```{r}
+valueBox(format(4175,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "planos aprovados em 2020 - Brasil", color = "#FFC56C", icon = "fa-child")
+
+```
+
+### planos aprovados em 2020 - Rio de Janeiro
+
+```{r}
+valueBox(format(87,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "planos aprovados em 2020 - Rio de Janeiro", color = "#FF5959", icon = "fa-child")
+```
+
+
+Row
+--------------------------------------------
+
+### planos aprovados em 2021 - Brasil
+
+```{r}
+
+valueBox(format(538,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "planos aprovados em 2021 - Brasil", color = "#FFC56C",
+  icon = "fa-music"
+)
+```
+
+
+### planos aprovados em 2021 - Rio de Janeiro
+
+```{r}
+
+valueBox(format(2,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "planos aprovados em 2021 - Rio de Janeiro", color = "#FF5959",
+  icon = "fa-music"
+)
+
+#009688 • #35a79c • #54b2a9 • #65c3ba • #83d0c9
+```
+
+
+
+

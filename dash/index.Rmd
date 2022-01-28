@@ -72,7 +72,7 @@ valueBox(format(sum(BD_APOENA$valor_total,na.rm = T),big.mark='.',
 
 ```{r}
 valueBox(format(sum(BD_APOENA_RJ$valor_total,na.rm = T),big.mark='.',
- small.mark=',',decimal.mark=','), caption = "Valor total - Rio de Janeiro", color = "#fe9c8f", icon = "fa-music")
+ small.mark=',',decimal.mark=','), caption = "Valor total - Rio de Janeiro", color = "#69462a", icon = "fa-music")
 
 ```
 
@@ -85,7 +85,7 @@ Row
 ```{r}
 
 valueBox(format(sum(BD_APOENA$pagamentos_realizados_pela_uniao,na.rm = T),big.mark='.',
- small.mark=',',decimal.mark=','), caption = "Pagamento realizados pela união - Brasil", color = "#4b86b4", icon = "fa-book-reader")
+ small.mark=',',decimal.mark=','), caption = "Pagamento realizados pela união - Brasil", color = "#2a4d69", icon = "fa-book-reader")
 
 
 ```
@@ -96,7 +96,7 @@ valueBox(format(sum(BD_APOENA$pagamentos_realizados_pela_uniao,na.rm = T),big.ma
 ```{r}
 
 valueBox(format(sum(BD_APOENA_RJ$pagamentos_realizados_pela_uniao,na.rm = T),big.mark='.',
- small.mark=',',decimal.mark=','), caption = "Pagamento realizados pela união - Rio de Janeiro", color = "#feb2a8", icon = "fa-book-reader")
+ small.mark=',',decimal.mark=','), caption = "Pagamento realizados pela união - Rio de Janeiro", color = "#69462a", icon = "fa-book-reader")
 
 ```
 
@@ -110,7 +110,7 @@ Row
 ```{r}
 #situacao_do_plano_e_pagamento
 valueBox(format(74.98,big.mark='.',
- small.mark=',',decimal.mark=','), caption = "Percentual de plano aprovado e pagamento - BRASIL", color = "#adcbe3", icon = "glyphicon-time")
+ small.mark=',',decimal.mark=','), caption = "Percentual de plano aprovado e pagamento - BRASIL", color = "#2a4d69", icon = "glyphicon-time")
 #round(prop.table(table(BD_APOENA$situacao_do_plano_e_pagamento)),2)[1]
 
 ```
@@ -121,7 +121,7 @@ valueBox(format(74.98,big.mark='.',
 ```{r}
 #situacao_do_plano_e_pagamento
 valueBox(format(94.57,big.mark='.',
- small.mark=',',decimal.mark=','), caption = "Percentual de plano aprovado e pagamento - Rio de Janeiro", color = "#fec8c1", icon = "glyphicon-time")
+ small.mark=',',decimal.mark=','), caption = "Percentual de plano aprovado e pagamento - Rio de Janeiro", color = "#69462a", icon = "glyphicon-time")
 #round(prop.table(table(BD_APOENA$situacao_do_plano_e_pagamento)),2)[1]
 ```
 
@@ -133,7 +133,7 @@ Row
 
 ```{r}
 valueBox(format(sum(BD_APOENA$saldo_em_conta_plataforma_de_indicadores,na.rm = T),big.mark='.',
- small.mark=',',decimal.mark=','), caption = "Saldo em conta plataforma de indicadores - Brasil", color = "#e7eff6", icon = "fa-palette")
+ small.mark=',',decimal.mark=','), caption = "Saldo em conta plataforma de indicadores - Brasil", color = "#2a4d69", icon = "fa-palette")
 
 
 ```
@@ -142,7 +142,7 @@ valueBox(format(sum(BD_APOENA$saldo_em_conta_plataforma_de_indicadores,na.rm = T
 
 ```{r}
 valueBox(format(sum(BD_APOENA_RJ$saldo_em_conta_plataforma_de_indicadores,na.rm = T),big.mark='.',
- small.mark=',',decimal.mark=','), caption = "Saldo em conta plataforma de indicadores - Rio de Janeiro", color = "#fad9c1", icon = "fa-palette")
+ small.mark=',',decimal.mark=','), caption = "Saldo em conta plataforma de indicadores - Rio de Janeiro", color = "#69462a", icon = "fa-palette")
 ```
 
 Row
@@ -152,7 +152,7 @@ Row
 
 ```{r}
 valueBox(format(4175,big.mark='.',
- small.mark=',',decimal.mark=','), caption = "planos aprovados em 2020 - Brasil", color = "#63ace5", icon = "fa-child")
+ small.mark=',',decimal.mark=','), caption = "planos aprovados em 2020 - Brasil", color = "#2a4d69", icon = "fa-child")
 
 ```
 
@@ -160,7 +160,7 @@ valueBox(format(4175,big.mark='.',
 
 ```{r}
 valueBox(format(87,big.mark='.',
- small.mark=',',decimal.mark=','), caption = "planos aprovados em 2020 - Rio de Janeiro", color = "#f9caa7", icon = "fa-child")
+ small.mark=',',decimal.mark=','), caption = "planos aprovados em 2020 - Rio de Janeiro", color = "#69462a", icon = "fa-child")
 ```
 
 
@@ -172,7 +172,7 @@ Row
 ```{r}
 
 valueBox(format(538,big.mark='.',
- small.mark=',',decimal.mark=','), caption = "planos aprovados em 2021 - Brasil", color = "skyblue",
+ small.mark=',',decimal.mark=','), caption = "planos aprovados em 2021 - Brasil", color = "2a4d69",
   icon = "fa-music"
 )
 ```
@@ -183,7 +183,7 @@ valueBox(format(538,big.mark='.',
 ```{r}
 
 valueBox(format(2,big.mark='.',
- small.mark=',',decimal.mark=','), caption = "planos aprovados em 2021 - Rio de Janeiro", color = "#ffe9dc",
+ small.mark=',',decimal.mark=','), caption = "planos aprovados em 2021 - Rio de Janeiro", color = "#69462a",
   icon = "fa-music"
 )
 
