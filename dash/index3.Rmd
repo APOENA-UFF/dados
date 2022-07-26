@@ -1,0 +1,334 @@
+---
+title: "LAB"
+output: 
+  flexdashboard::flex_dashboard:
+    theme:
+       bootswatch: journal
+       bg: "#c2d5db"
+       fg: "#010c12"
+       primary: "#1e698d"
+       heading_font: 
+         google: Sen
+       base_font:
+         google: Sen
+       code_font:
+         google: JetBrains Mono
+    orientation: rows
+    vertical_layout: fill
+    social: [ "twitter", "facebook", "menu"]
+    navbar:
+      - { title: "APOENA", href: "https://apoenaredecultural.wordpress.com/", align: right, icon: glyphicon-time}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,message = FALSE, warning = FALSE,comment = NA)
+library(flexdashboard)
+# Row {data-width=100}
+
+library(RColorBrewer)
+
+#brewer.pal(6,"Blues")[1]
+#brewer.pal(6,"Greens")
+#brewer.pal(6,"Reds")
+#brewer.pal(6,"Oranges")
+```
+
+
+```{css}
+
+.value-output {
+  color: black;
+}
+
+.caption {
+  color: black;
+}
+
+```
+
+
+APOENA
+=============================================
+
+
+<p>
+<figure>
+<img src="olho-apoena.jpg" alt="Apresentação" class="center" style="width:800px;height:700px;"/>
+</figure> 
+<p/>
+
+Informações básicas
+=============================================
+
+## Informações sobre o Brasil e o Rio de Janeiro
+
+Value Boxes {data-width=200}
+-------------------------------------
+
+
+
+### Destinação de Recursos - Brasil
+
+```{r}
+valueBox(format(1500000000,big.mark='.', small.mark=',',decimal.mark=','), caption = "Destinação de Recursos - Brasil", color = brewer.pal(6,"Blues")[1],icon = "fa-music")
+
+```
+
+### Percentual destinação de Recursos - Brasil
+
+```{r}
+
+valueBox(format(100,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Percentual destinação de Recursos - Brasil", color =brewer.pal(6,"Oranges")[1], icon = "fa-music")
+
+
+```
+
+### Destinação de Recursos - Rio de Janeiro
+
+```{r}
+valueBox(format(107677150.35,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Destinação de Recursos - Rio de Janeiro", color =brewer.pal(6,"Greens")[1], icon = "fa-music")
+
+```
+
+
+
+###  Percentual destinação de Recursos - Rio de Janeiro
+
+```{r}
+
+valueBox(format(100,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = " Percentual destinação de Recursos", color =brewer.pal(6,"Reds")[1], icon = "fa-music")
+
+```
+
+
+Row
+---------------------------------------------
+
+
+### Municípios que acessaram a LAB em 2020 (plano de ação aprovado e pago) - Brasil
+
+```{r}
+
+valueBox(format(4176,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Municípios que acessaram a LAB em 2020 (plano de ação aprovado e pago)", color = brewer.pal(6,"Blues")[2], icon = "fa-video")
+
+```
+
+
+### Percentual de municípios que acessaram a LAB em 2020 (plano de ação aprovado e pago) - Brasil
+
+```{r}
+
+valueBox(format(75,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = " Percentual de municípios que acessaram a LAB em 2020 (plano de ação aprovado e pago)", color = brewer.pal(6,"Oranges")[2], icon = "fa-video")
+
+```
+
+
+###  Municípios que acessaram a LAB em 2020 (plano de ação aprovado e pago)  - Rio de Janeiro
+
+```{r}
+
+valueBox(format(87,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Municípios que acessaram a LAB em 2020 (plano de ação aprovado e pago) - Rio de Janeiro", color = brewer.pal(6,"Greens")[2], icon = "fa-video")
+
+```
+
+### Percentual de municípios que acessaram a LAB em 2020 (plano de ação aprovado e pago)  - Rio de Janeiro
+
+```{r}
+
+valueBox(format(94.6,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Percentual de municípios que acessaram a LAB em 2020 (plano de ação aprovado e pago) - Rio de Janeiro", color = brewer.pal(6,"Reds")[2], icon = "fa-video")
+
+```
+
+Row
+---------------------------------------------
+
+### Municípios que acessaram a LAB em 2021 (plano de ação aprovado e pago) - Brasil
+
+```{r}
+
+valueBox(format(569,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Municípios que acessaram a LAB em 2021 (plano de ação aprovado e pago)", color = brewer.pal(6,"Blues")[3], icon = "fa-brush")
+
+```
+
+
+### Percentual de municípios que acessaram a LAB em 2021 (plano de ação aprovado e pago) - Brasil
+
+```{r}
+
+valueBox(format(10.2,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Percentual de municípios que acessaram a LAB em 2021 (plano de ação aprovado e pago)", color = brewer.pal(6,"Oranges")[3], icon = "fa-brush")
+
+```
+
+
+###  Municípios que acessaram a LAB em 2021 (plano de ação aprovado e pago)  - Rio de Janeiro
+
+```{r}
+
+valueBox(format(2,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Municípios que acessaram a LAB em 2021 (plano de ação aprovado e pago) - Rio de Janeiro", color = brewer.pal(6,"Greens")[3], icon = "fa-brush")
+
+```
+
+### Percentual de municípios que acessaram a LAB em 2021 (plano de ação aprovado e pago)  - Rio de Janeiro
+
+```{r}
+
+valueBox(format(2.2,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Percentual de municípios que acessaram a LAB em 2021 (plano de ação aprovado e pago) - Rio de Janeiro", color = brewer.pal(6,"Reds")[3], icon = "fa-brush")
+
+```
+
+
+
+Row
+---------------------------------------------
+
+
+
+### Municípios que não acessaram a LAB - Brasil
+
+```{r}
+
+valueBox(format(824,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Municípios que não acessaram a LAB - Brasil", color = brewer.pal(6,"Blues")[4], icon = "fa-book")
+
+```
+
+
+### Percentual de municípios que não acessaram a LAB - Brasil
+
+```{r}
+
+valueBox(format(14.8,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Percentual de municípios que não acessaram a LAB - Brasil", color = brewer.pal(6,"Oranges")[4], icon = "fa-book")
+
+```
+
+
+###  Municípios que não acessaram a LAB - Rio de Janeiro
+
+```{r}
+
+valueBox(format(3,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Municípios que não acessaram a LAB - Rio de Janeiro", color = brewer.pal(6,"Greens")[4], icon = "fa-book")
+
+```
+
+### Percentual de municípios que não acessaram a LAB - Rio de Janeiro
+
+```{r}
+
+valueBox(format(3.3,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Percentual de municípios que não acessaram a LAB - Rio de Janeiro", color = brewer.pal(6,"Reds")[4], icon = "fa-book")
+
+```
+
+
+
+
+Row
+---------------------------------------------
+
+
+
+### Recursos acessados em 2020 - Brasil
+
+```{r}
+
+valueBox(format(1381664505.97,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Recursos acessados em 2020 - Brasil", color = brewer.pal(6,"Blues")[5], icon = "fa-camera")
+
+```
+
+
+### Percentual de recursos acessados em 2020 - Brasil
+
+```{r}
+
+valueBox(format(92.1,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = " Percentual de recursos acessados em 2020 - Brasil", color = brewer.pal(6,"Oranges")[5], icon = "fa-camera")
+
+```
+
+###  Recursos acessados em 2020 - Rio de Janeiro
+
+```{r}
+
+valueBox(format(106930294.49,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Recursos acessados em 2020 - Rio de Janeiro", color = brewer.pal(6,"Greens")[5], icon = "fa-camera")
+
+```
+
+### Percentual de recursos acessados em 2020 - Rio de Janeiro
+
+```{r}
+
+valueBox(format(99.3,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Percentual de recursos acessados em 2020 - Rio de Janeiro", color =brewer.pal(6,"Reds")[5], icon = "fa-camera")
+
+```
+
+
+
+
+
+
+
+
+
+
+
+Row
+---------------------------------------------
+
+
+
+### Recursos (previsto) aos municípios que acessaram em 2021 - Brasil
+
+```{r}
+
+valueBox(format(48371549.29,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Recursos (previsto) aos municípios que acessaram em 2021 - Brasil", color = brewer.pal(6,"Blues")[6], icon = "fa-headphones")
+
+```
+
+### Percentual de recursos (previsto) aos municípios que acessaram em 2021 - Brasil
+
+```{r}
+
+valueBox(format(3.2,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Percentual de recursos (previsto) aos municípios que acessaram em 2021 - Brasil", color = brewer.pal(6,"Oranges")[6], icon = "fa-headphones")
+
+```
+
+### Recursos (previsto) aos municípios que acessaram em 2021 - Rio de Janeiro
+
+```{r}
+
+valueBox(format(198925.16,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Recursos acessados em 2020 - Rio de Janeiro", color = brewer.pal(6,"Greens")[6], icon = "fa-headphones")
+
+```
+
+### Percentual de recursos (previsto) aos municípios que acessaram em 2021 - Rio de Janeiro
+
+```{r}
+
+valueBox(format(0.2,big.mark='.',
+ small.mark=',',decimal.mark=','), caption = "Percentual de recursos (previsto) aos municípios que acessaram em 2021 - Rio de Janeiro", color = brewer.pal(6,"Reds")[6], icon = "fa-headphones")
+
+```
+
+
+Row
+---------------------------------------------
+
