@@ -2,16 +2,13 @@
 title: "APOENA DADOS"
 subtitle: "Informações sobre a Lei Aldir Blanc"
 author: "[APOENA](https://apoenaredecultural.wordpress.com/)"
-date: "12 de setembro de 2021: <br><br>   última atualização: <br> `r format(Sys.Date(), '%d de %B de %Y')`"
+date: "12 de setembro de 2021: <br><br>   última atualização: <br> 02 de agosto de 2022"
 output: 
   cleanrmd::html_document_clean:
     theme: new
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
 
-```
 
 ## O que é o APOENA
 
