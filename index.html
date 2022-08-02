@@ -13,8 +13,396 @@
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
 
-  <script src="data:application/javascript;base64,Ly8gUGFuZG9jIDIuOSBhZGRzIGF0dHJpYnV0ZXMgb24gYm90aCBoZWFkZXIgYW5kIGRpdi4gV2UgcmVtb3ZlIHRoZSBmb3JtZXIgKHRvCi8vIGJlIGNvbXBhdGlibGUgd2l0aCB0aGUgYmVoYXZpb3Igb2YgUGFuZG9jIDwgMi44KS4KZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcignRE9NQ29udGVudExvYWRlZCcsIGZ1bmN0aW9uKGUpIHsKICB2YXIgaHMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCJkaXYuc2VjdGlvbltjbGFzcyo9J2xldmVsJ10gPiA6Zmlyc3QtY2hpbGQiKTsKICB2YXIgaSwgaCwgYTsKICBmb3IgKGkgPSAwOyBpIDwgaHMubGVuZ3RoOyBpKyspIHsKICAgIGggPSBoc1tpXTsKICAgIGlmICghL15oWzEtNl0kL2kudGVzdChoLnRhZ05hbWUpKSBjb250aW51ZTsgIC8vIGl0IHNob3VsZCBiZSBhIGhlYWRlciBoMS1oNgogICAgYSA9IGguYXR0cmlidXRlczsKICAgIHdoaWxlIChhLmxlbmd0aCA+IDApIGgucmVtb3ZlQXR0cmlidXRlKGFbMF0ubmFtZSk7CiAgfQp9KTsK"></script>
-  <link href="data:text/css,%3Aroot%20%7B%0A%2D%2Dnc%2Dfont%2Dsans%3A%20%27Inter%27%2C%20%2Dapple%2Dsystem%2C%20BlinkMacSystemFont%2C%20%27Segoe%20UI%27%2C%20Roboto%2C%20Oxygen%2C%20Ubuntu%2C%20Cantarell%2C%20%27Open%20Sans%27%2C%20%27Helvetica%20Neue%27%2C%20sans%2Dserif%2C%20%22Apple%20Color%20Emoji%22%2C%20%22Segoe%20UI%20Emoji%22%2C%20%22Segoe%20UI%20Symbol%22%3B%0A%2D%2Dnc%2Dfont%2Dmono%3A%20Consolas%2C%20monaco%2C%20%27Ubuntu%20Mono%27%2C%20%27Liberation%20Mono%27%2C%20%27Courier%20New%27%2C%20Courier%2C%20monospace%3B%0A%0A%2D%2Dnc%2Dtx%2D1%3A%20%23000000%3B%0A%2D%2Dnc%2Dtx%2D2%3A%20%231A1A1A%3B%0A%2D%2Dnc%2Dbg%2D1%3A%20%23FFFFFF%3B%0A%2D%2Dnc%2Dbg%2D2%3A%20%23F6F8FA%3B%0A%2D%2Dnc%2Dbg%2D3%3A%20%23E5E7EB%3B%0A%2D%2Dnc%2Dlk%2D1%3A%20%230070F3%3B%0A%2D%2Dnc%2Dlk%2D2%3A%20%230366D6%3B%0A%2D%2Dnc%2Dlk%2Dtx%3A%20%23FFFFFF%3B%0A%2D%2Dnc%2Dac%2D1%3A%20%2379FFE1%3B%0A%2D%2Dnc%2Dac%2Dtx%3A%20%230C4047%3B%0A%0A%2D%2Dnc%2Dd%2Dtx%2D1%3A%20%23ffffff%3B%0A%2D%2Dnc%2Dd%2Dtx%2D2%3A%20%23eeeeee%3B%0A%2D%2Dnc%2Dd%2Dbg%2D1%3A%20%23000000%3B%0A%2D%2Dnc%2Dd%2Dbg%2D2%3A%20%23111111%3B%0A%2D%2Dnc%2Dd%2Dbg%2D3%3A%20%23222222%3B%0A%2D%2Dnc%2Dd%2Dlk%2D1%3A%20%233291FF%3B%0A%2D%2Dnc%2Dd%2Dlk%2D2%3A%20%230070F3%3B%0A%2D%2Dnc%2Dd%2Dlk%2Dtx%3A%20%23FFFFFF%3B%0A%2D%2Dnc%2Dd%2Dac%2D1%3A%20%237928CA%3B%0A%2D%2Dnc%2Dd%2Dac%2Dtx%3A%20%23FFFFFF%3B%0A%7D%0A%40media%20%28prefers%2Dcolor%2Dscheme%3A%20dark%29%20%7B%0A%3Aroot%20%7B%0A%2D%2Dnc%2Dtx%2D1%3A%20var%28%2D%2Dnc%2Dd%2Dtx%2D1%29%3B%0A%2D%2Dnc%2Dtx%2D2%3A%20var%28%2D%2Dnc%2Dd%2Dtx%2D2%29%3B%0A%2D%2Dnc%2Dbg%2D1%3A%20var%28%2D%2Dnc%2Dd%2Dbg%2D1%29%3B%0A%2D%2Dnc%2Dbg%2D2%3A%20var%28%2D%2Dnc%2Dd%2Dbg%2D2%29%3B%0A%2D%2Dnc%2Dbg%2D3%3A%20var%28%2D%2Dnc%2Dd%2Dbg%2D3%29%3B%0A%2D%2Dnc%2Dlk%2D1%3A%20var%28%2D%2Dnc%2Dd%2Dlk%2D1%29%3B%0A%2D%2Dnc%2Dlk%2D2%3A%20var%28%2D%2Dnc%2Dd%2Dlk%2D2%29%3B%0A%2D%2Dnc%2Dlk%2Dtx%3A%20var%28%2D%2Dnc%2D%2Ddlk%2Dtx%29%3B%0A%2D%2Dnc%2Dac%2D1%3A%20var%28%2D%2Dnc%2Dd%2Dac%2D1%29%3B%0A%2D%2Dnc%2Dac%2Dtx%3A%20var%28%2D%2Dnc%2D%2Ddac%2Dtx%29%3B%0A%7D%0A%7D%0A%2A%20%7B%0A%0Amargin%3A%200%3B%0Apadding%3A%200%3B%0A%7D%0Aaddress%2C%0Aarea%2C%0Aarticle%2C%0Aaside%2C%0Aaudio%2C%0Ablockquote%2C%0Adatalist%2C%0Adetails%2C%0Adl%2C%0Afieldset%2C%0Afigure%2C%0Aform%2C%0Ainput%2C%0Aiframe%2C%0Aimg%2C%0Ameter%2C%0Anav%2C%0Aol%2C%0Aoptgroup%2C%0Aoption%2C%0Aoutput%2C%0Ap%2C%0Apre%2C%0Aprogress%2C%0Aruby%2C%0Asection%2C%0Atable%2C%0Atextarea%2C%0Aul%2C%0Avideo%20%7B%0A%0Amargin%2Dbottom%3A%201rem%3B%0A%7D%0Ahtml%2Cinput%2Cselect%2Cbutton%20%7B%0A%0Afont%2Dfamily%3A%20var%28%2D%2Dnc%2Dfont%2Dsans%29%3B%0A%7D%0Abody%20%7B%0A%0Amargin%3A%200%20auto%3B%0Amax%2Dwidth%3A%20750px%3B%0Apadding%3A%202rem%3B%0Aborder%2Dradius%3A%206px%3B%0Aoverflow%2Dx%3A%20hidden%3B%0Aword%2Dbreak%3A%20break%2Dword%3B%0Aoverflow%2Dwrap%3A%20break%2Dword%3B%0Abackground%3A%20var%28%2D%2Dnc%2Dbg%2D1%29%3B%0A%0Acolor%3A%20var%28%2D%2Dnc%2Dtx%2D2%29%3B%0Afont%2Dsize%3A%201%2E03rem%3B%0Aline%2Dheight%3A%201%2E5%3B%0A%7D%0A%3A%3Aselection%20%7B%0A%0Abackground%3A%20var%28%2D%2Dnc%2Dac%2D1%29%3B%0Acolor%3A%20var%28%2D%2Dnc%2Dac%2Dtx%29%3B%0A%7D%0Ah1%2Ch2%2Ch3%2Ch4%2Ch5%2Ch6%20%7B%0Aline%2Dheight%3A%201%3B%0Acolor%3A%20var%28%2D%2Dnc%2Dtx%2D1%29%3B%0Apadding%2Dtop%3A%20%2E875rem%3B%0A%7D%0Ah1%2C%0Ah2%2C%0Ah3%20%7B%0Acolor%3A%20var%28%2D%2Dnc%2Dtx%2D1%29%3B%0Apadding%2Dbottom%3A%202px%3B%0Amargin%2Dbottom%3A%208px%3B%0Aborder%2Dbottom%3A%201px%20solid%20var%28%2D%2Dnc%2Dbg%2D2%29%3B%0A%7D%0Ah4%2C%0Ah5%2C%0Ah6%20%7B%0Amargin%2Dbottom%3A%20%2E3rem%3B%0A%7D%0Ah1%20%7B%0Afont%2Dsize%3A%202%2E25rem%3B%0A%7D%0Ah2%20%7B%0Afont%2Dsize%3A%201%2E85rem%3B%0A%7D%0Ah3%20%7B%0Afont%2Dsize%3A%201%2E55rem%3B%0A%7D%0Ah4%20%7B%0Afont%2Dsize%3A%201%2E25rem%3B%0A%7D%0Ah5%20%7B%0Afont%2Dsize%3A%201rem%3B%0A%7D%0Ah6%20%7B%0Afont%2Dsize%3A%20%2E875rem%3B%0A%7D%0Aa%20%7B%0Acolor%3A%20var%28%2D%2Dnc%2Dlk%2D1%29%3B%0A%7D%0Aa%3Ahover%20%7B%0Acolor%3A%20var%28%2D%2Dnc%2Dlk%2D2%29%3B%0A%7D%0Aabbr%3Ahover%20%7B%0A%0Acursor%3A%20help%3B%0A%7D%0Ablockquote%20%7B%0Apadding%3A%201%2E5rem%3B%0Abackground%3A%20var%28%2D%2Dnc%2Dbg%2D2%29%3B%0Aborder%2Dleft%3A%205px%20solid%20var%28%2D%2Dnc%2Dbg%2D3%29%3B%0A%7D%0Aabbr%20%7B%0Acursor%3A%20help%3B%0A%7D%0Ablockquote%20%2A%3Alast%2Dchild%20%7B%0Apadding%2Dbottom%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Aheader%20%7B%0Abackground%3A%20var%28%2D%2Dnc%2Dbg%2D2%29%3B%0Aborder%2Dbottom%3A%201px%20solid%20var%28%2D%2Dnc%2Dbg%2D3%29%3B%0Apadding%3A%202rem%201%2E5rem%3B%0A%0Amargin%3A%20%2D2rem%20calc%280px%20%2D%20%2850vw%20%2D%2050%25%29%29%202rem%3B%0A%0Apadding%2Dleft%3A%20calc%2850vw%20%2D%2050%25%29%3B%0Apadding%2Dright%3A%20calc%2850vw%20%2D%2050%25%29%3B%0A%7D%0Aheader%20h1%2C%0Aheader%20h2%2C%0Aheader%20h3%20%7B%0Apadding%2Dbottom%3A%200%3B%0Aborder%2Dbottom%3A%200%3B%0A%7D%0Aheader%20%3E%20%2A%3Afirst%2Dchild%20%7B%0Amargin%2Dtop%3A%200%3B%0Apadding%2Dtop%3A%200%3B%0A%7D%0Aheader%20%3E%20%2A%3Alast%2Dchild%20%7B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Aa%20button%2C%0Abutton%2C%0Ainput%5Btype%3D%22submit%22%5D%2C%0Ainput%5Btype%3D%22reset%22%5D%2C%0Ainput%5Btype%3D%22button%22%5D%20%7B%0Afont%2Dsize%3A%201rem%3B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%3A%206px%2012px%3B%0Atext%2Dalign%3A%20center%3B%0Atext%2Ddecoration%3A%20none%3B%0Awhite%2Dspace%3A%20nowrap%3B%0Abackground%3A%20var%28%2D%2Dnc%2Dlk%2D1%29%3B%0Acolor%3A%20var%28%2D%2Dnc%2Dlk%2Dtx%29%3B%0Aborder%3A%200%3B%0Aborder%2Dradius%3A%204px%3B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0Acursor%3A%20pointer%3B%0Acolor%3A%20var%28%2D%2Dnc%2Dlk%2Dtx%29%3B%0A%7D%0Aa%20button%5Bdisabled%5D%2C%0Abutton%5Bdisabled%5D%2C%0Ainput%5Btype%3D%22submit%22%5D%5Bdisabled%5D%2C%0Ainput%5Btype%3D%22reset%22%5D%5Bdisabled%5D%2C%0Ainput%5Btype%3D%22button%22%5D%5Bdisabled%5D%20%7B%0Acursor%3A%20default%3B%0Aopacity%3A%20%2E5%3B%0A%0Acursor%3A%20not%2Dallowed%3B%0A%7D%0A%2Ebutton%3Afocus%2C%0A%2Ebutton%3Aenabled%3Ahover%2C%0Abutton%3Afocus%2C%0Abutton%3Aenabled%3Ahover%2C%0Ainput%5Btype%3D%22submit%22%5D%3Afocus%2C%0Ainput%5Btype%3D%22submit%22%5D%3Aenabled%3Ahover%2C%0Ainput%5Btype%3D%22reset%22%5D%3Afocus%2C%0Ainput%5Btype%3D%22reset%22%5D%3Aenabled%3Ahover%2C%0Ainput%5Btype%3D%22button%22%5D%3Afocus%2C%0Ainput%5Btype%3D%22button%22%5D%3Aenabled%3Ahover%20%7B%0Abackground%3A%20var%28%2D%2Dnc%2Dlk%2D2%29%3B%0A%7D%0Acode%2C%0Apre%2C%0Akbd%2C%0Asamp%20%7B%0A%0Afont%2Dfamily%3A%20var%28%2D%2Dnc%2Dfont%2Dmono%29%3B%0A%7D%0Acode%2C%0Asamp%2C%0Akbd%2C%0Apre%20%7B%0A%0Abackground%3A%20var%28%2D%2Dnc%2Dbg%2D2%29%3B%0Aborder%3A%201px%20solid%20var%28%2D%2Dnc%2Dbg%2D3%29%3B%0Aborder%2Dradius%3A%204px%3B%0Apadding%3A%203px%206px%3B%0A%0Afont%2Dsize%3A%200%2E9em%3B%0A%7D%0Akbd%20%7B%0A%0Aborder%2Dbottom%3A%203px%20solid%20var%28%2D%2Dnc%2Dbg%2D3%29%3B%0A%7D%0Apre%20%7B%0Apadding%3A%201rem%201%2E4rem%3B%0Amax%2Dwidth%3A%20100%25%3B%0Aoverflow%3A%20auto%3B%0A%7D%0Apre%20code%20%7B%0A%0Abackground%3A%20inherit%3B%0Afont%2Dsize%3A%20inherit%3B%0Acolor%3A%20inherit%3B%0Aborder%3A%200%3B%0Apadding%3A%200%3B%0Amargin%3A%200%3B%0A%7D%0Acode%20pre%20%7B%0A%0Adisplay%3A%20inline%3B%0Abackground%3A%20inherit%3B%0Afont%2Dsize%3A%20inherit%3B%0Acolor%3A%20inherit%3B%0Aborder%3A%200%3B%0Apadding%3A%200%3B%0Amargin%3A%200%3B%0A%7D%0Adetails%20%7B%0A%0Apadding%3A%20%2E6rem%201rem%3B%0Abackground%3A%20var%28%2D%2Dnc%2Dbg%2D2%29%3B%0Aborder%3A%201px%20solid%20var%28%2D%2Dnc%2Dbg%2D3%29%3B%0Aborder%2Dradius%3A%204px%3B%0A%7D%0Asummary%20%7B%0A%0Acursor%3A%20pointer%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Adetails%5Bopen%5D%20%7B%0A%0Apadding%2Dbottom%3A%20%2E75rem%3B%0A%7D%0Adetails%5Bopen%5D%20summary%20%7B%0A%0Amargin%2Dbottom%3A%206px%3B%0A%7D%0Adetails%5Bopen%5D%3E%2A%3Alast%2Dchild%20%7B%0A%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Adt%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Add%3A%3Abefore%20%7B%0A%0Acontent%3A%20%27%E2%86%92%20%27%3B%0A%7D%0Ahr%20%7B%0A%0Aborder%3A%200%3B%0Aborder%2Dbottom%3A%201px%20solid%20var%28%2D%2Dnc%2Dbg%2D3%29%3B%0Amargin%3A%201rem%20auto%3B%0A%7D%0Afieldset%20%7B%0Amargin%2Dtop%3A%201rem%3B%0Apadding%3A%202rem%3B%0Aborder%3A%201px%20solid%20var%28%2D%2Dnc%2Dbg%2D3%29%3B%0Aborder%2Dradius%3A%204px%3B%0A%7D%0Alegend%20%7B%0Apadding%3A%20auto%20%2E5rem%3B%0A%7D%0Atable%20%7B%0A%0Aborder%2Dcollapse%3A%20collapse%3B%0Awidth%3A%20100%25%0A%7D%0Atd%2C%0Ath%20%7B%0Aborder%3A%201px%20solid%20var%28%2D%2Dnc%2Dbg%2D3%29%3B%0Atext%2Dalign%3A%20left%3B%0Apadding%3A%20%2E5rem%3B%0A%7D%0Ath%20%7B%0Abackground%3A%20var%28%2D%2Dnc%2Dbg%2D2%29%3B%0A%7D%0Atr%3Anth%2Dchild%28even%29%20%7B%0A%0Abackground%3A%20var%28%2D%2Dnc%2Dbg%2D2%29%3B%0A%7D%0Atable%20caption%20%7B%0Afont%2Dweight%3A%20bold%3B%0Amargin%2Dbottom%3A%20%2E5rem%3B%0A%7D%0Atextarea%20%7B%0A%0Amax%2Dwidth%3A%20100%25%3B%0A%7D%0Aol%2C%0Aul%20%7B%0A%0Apadding%2Dleft%3A%202rem%3B%0A%7D%0Ali%20%7B%0Amargin%2Dtop%3A%20%2E4rem%3B%0A%7D%0Aul%20ul%2C%0Aol%20ul%2C%0Aul%20ol%2C%0Aol%20ol%20%7B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Amark%20%7B%0Apadding%3A%203px%206px%3B%0Abackground%3A%20var%28%2D%2Dnc%2Dac%2D1%29%3B%0Acolor%3A%20var%28%2D%2Dnc%2Dac%2Dtx%29%3B%0A%7D%0Atextarea%2C%0Aselect%2C%0Ainput%20%7B%0Apadding%3A%206px%2012px%3B%0Amargin%2Dbottom%3A%20%2E5rem%3B%0Abackground%3A%20var%28%2D%2Dnc%2Dbg%2D2%29%3B%0Acolor%3A%20var%28%2D%2Dnc%2Dtx%2D2%29%3B%0Aborder%3A%201px%20solid%20var%28%2D%2Dnc%2Dbg%2D3%29%3B%0Aborder%2Dradius%3A%204px%3B%0Abox%2Dshadow%3A%20none%3B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0A%7D%0Aimg%20%7B%0Amax%2Dwidth%3A%20100%25%3B%0A%7D" rel="stylesheet" />
+  <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
+  <style type="text/css">:root {
+--nc-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+--nc-font-mono: Consolas, monaco, 'Ubuntu Mono', 'Liberation Mono', 'Courier New', Courier, monospace;
+
+--nc-tx-1: #000000;
+--nc-tx-2: #1A1A1A;
+--nc-bg-1: #FFFFFF;
+--nc-bg-2: #F6F8FA;
+--nc-bg-3: #E5E7EB;
+--nc-lk-1: #0070F3;
+--nc-lk-2: #0366D6;
+--nc-lk-tx: #FFFFFF;
+--nc-ac-1: #79FFE1;
+--nc-ac-tx: #0C4047;
+
+--nc-d-tx-1: #ffffff;
+--nc-d-tx-2: #eeeeee;
+--nc-d-bg-1: #000000;
+--nc-d-bg-2: #111111;
+--nc-d-bg-3: #222222;
+--nc-d-lk-1: #3291FF;
+--nc-d-lk-2: #0070F3;
+--nc-d-lk-tx: #FFFFFF;
+--nc-d-ac-1: #7928CA;
+--nc-d-ac-tx: #FFFFFF;
+}
+@media (prefers-color-scheme: dark) {
+:root {
+--nc-tx-1: var(--nc-d-tx-1);
+--nc-tx-2: var(--nc-d-tx-2);
+--nc-bg-1: var(--nc-d-bg-1);
+--nc-bg-2: var(--nc-d-bg-2);
+--nc-bg-3: var(--nc-d-bg-3);
+--nc-lk-1: var(--nc-d-lk-1);
+--nc-lk-2: var(--nc-d-lk-2);
+--nc-lk-tx: var(--nc--dlk-tx);
+--nc-ac-1: var(--nc-d-ac-1);
+--nc-ac-tx: var(--nc--dac-tx);
+}
+}
+* {
+
+margin: 0;
+padding: 0;
+}
+address,
+area,
+article,
+aside,
+audio,
+blockquote,
+datalist,
+details,
+dl,
+fieldset,
+figure,
+form,
+input,
+iframe,
+img,
+meter,
+nav,
+ol,
+optgroup,
+option,
+output,
+p,
+pre,
+progress,
+ruby,
+section,
+table,
+textarea,
+ul,
+video {
+
+margin-bottom: 1rem;
+}
+html,input,select,button {
+
+font-family: var(--nc-font-sans);
+}
+body {
+
+margin: 0 auto;
+max-width: 750px;
+padding: 2rem;
+border-radius: 6px;
+overflow-x: hidden;
+word-break: break-word;
+overflow-wrap: break-word;
+background: var(--nc-bg-1);
+
+color: var(--nc-tx-2);
+font-size: 1.03rem;
+line-height: 1.5;
+}
+::selection {
+
+background: var(--nc-ac-1);
+color: var(--nc-ac-tx);
+}
+h1,h2,h3,h4,h5,h6 {
+line-height: 1;
+color: var(--nc-tx-1);
+padding-top: .875rem;
+}
+h1,
+h2,
+h3 {
+color: var(--nc-tx-1);
+padding-bottom: 2px;
+margin-bottom: 8px;
+border-bottom: 1px solid var(--nc-bg-2);
+}
+h4,
+h5,
+h6 {
+margin-bottom: .3rem;
+}
+h1 {
+font-size: 2.25rem;
+}
+h2 {
+font-size: 1.85rem;
+}
+h3 {
+font-size: 1.55rem;
+}
+h4 {
+font-size: 1.25rem;
+}
+h5 {
+font-size: 1rem;
+}
+h6 {
+font-size: .875rem;
+}
+a {
+color: var(--nc-lk-1);
+}
+a:hover {
+color: var(--nc-lk-2);
+}
+abbr:hover {
+
+cursor: help;
+}
+blockquote {
+padding: 1.5rem;
+background: var(--nc-bg-2);
+border-left: 5px solid var(--nc-bg-3);
+}
+abbr {
+cursor: help;
+}
+blockquote *:last-child {
+padding-bottom: 0;
+margin-bottom: 0;
+}
+header {
+background: var(--nc-bg-2);
+border-bottom: 1px solid var(--nc-bg-3);
+padding: 2rem 1.5rem;
+
+margin: -2rem calc(0px - (50vw - 50%)) 2rem;
+
+padding-left: calc(50vw - 50%);
+padding-right: calc(50vw - 50%);
+}
+header h1,
+header h2,
+header h3 {
+padding-bottom: 0;
+border-bottom: 0;
+}
+header > *:first-child {
+margin-top: 0;
+padding-top: 0;
+}
+header > *:last-child {
+margin-bottom: 0;
+}
+a button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+font-size: 1rem;
+display: inline-block;
+padding: 6px 12px;
+text-align: center;
+text-decoration: none;
+white-space: nowrap;
+background: var(--nc-lk-1);
+color: var(--nc-lk-tx);
+border: 0;
+border-radius: 4px;
+box-sizing: border-box;
+cursor: pointer;
+color: var(--nc-lk-tx);
+}
+a button[disabled],
+button[disabled],
+input[type="submit"][disabled],
+input[type="reset"][disabled],
+input[type="button"][disabled] {
+cursor: default;
+opacity: .5;
+
+cursor: not-allowed;
+}
+.button:focus,
+.button:enabled:hover,
+button:focus,
+button:enabled:hover,
+input[type="submit"]:focus,
+input[type="submit"]:enabled:hover,
+input[type="reset"]:focus,
+input[type="reset"]:enabled:hover,
+input[type="button"]:focus,
+input[type="button"]:enabled:hover {
+background: var(--nc-lk-2);
+}
+code,
+pre,
+kbd,
+samp {
+
+font-family: var(--nc-font-mono);
+}
+code,
+samp,
+kbd,
+pre {
+
+background: var(--nc-bg-2);
+border: 1px solid var(--nc-bg-3);
+border-radius: 4px;
+padding: 3px 6px;
+
+font-size: 0.9em;
+}
+kbd {
+
+border-bottom: 3px solid var(--nc-bg-3);
+}
+pre {
+padding: 1rem 1.4rem;
+max-width: 100%;
+overflow: auto;
+}
+pre code {
+
+background: inherit;
+font-size: inherit;
+color: inherit;
+border: 0;
+padding: 0;
+margin: 0;
+}
+code pre {
+
+display: inline;
+background: inherit;
+font-size: inherit;
+color: inherit;
+border: 0;
+padding: 0;
+margin: 0;
+}
+details {
+
+padding: .6rem 1rem;
+background: var(--nc-bg-2);
+border: 1px solid var(--nc-bg-3);
+border-radius: 4px;
+}
+summary {
+
+cursor: pointer;
+font-weight: bold;
+}
+details[open] {
+
+padding-bottom: .75rem;
+}
+details[open] summary {
+
+margin-bottom: 6px;
+}
+details[open]>*:last-child {
+
+margin-bottom: 0;
+}
+dt {
+font-weight: bold;
+}
+dd::before {
+
+content: '→ ';
+}
+hr {
+
+border: 0;
+border-bottom: 1px solid var(--nc-bg-3);
+margin: 1rem auto;
+}
+fieldset {
+margin-top: 1rem;
+padding: 2rem;
+border: 1px solid var(--nc-bg-3);
+border-radius: 4px;
+}
+legend {
+padding: auto .5rem;
+}
+table {
+
+border-collapse: collapse;
+width: 100%
+}
+td,
+th {
+border: 1px solid var(--nc-bg-3);
+text-align: left;
+padding: .5rem;
+}
+th {
+background: var(--nc-bg-2);
+}
+tr:nth-child(even) {
+
+background: var(--nc-bg-2);
+}
+table caption {
+font-weight: bold;
+margin-bottom: .5rem;
+}
+textarea {
+
+max-width: 100%;
+}
+ol,
+ul {
+
+padding-left: 2rem;
+}
+li {
+margin-top: .4rem;
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+margin-bottom: 0;
+}
+mark {
+padding: 3px 6px;
+background: var(--nc-ac-1);
+color: var(--nc-ac-tx);
+}
+textarea,
+select,
+input {
+padding: 6px 12px;
+margin-bottom: .5rem;
+background: var(--nc-bg-2);
+color: var(--nc-tx-2);
+border: 1px solid var(--nc-bg-3);
+border-radius: 4px;
+box-shadow: none;
+box-sizing: border-box;
+}
+img {
+max-width: 100%;
+}</style>
 </head>
 <body>
 <style type="text/css" charset="utf-8">
@@ -38,32 +426,46 @@ img {
 <main>
 <header>
 <h1 id="title" class="toc-ignore">APOENA DADOS</h1>
-<h2 id="subtitle" class="toc-ignore">Informações sobre a Lei Aldir Blanc</h2>
-<p id="date">12 de setembro de 2021: <br><br> última atualização: <br> 28 de novembro de 2021</p>
+<h2 id="subtitle" class="toc-ignore">Informações sobre a Lei Aldir
+Blanc</h2>
+<p id="date">12 de setembro de 2021: <br><br> última atualização: <br>
+02 de agosto de 2022</p>
 <p id="author"><a href="https://apoenaredecultural.wordpress.com/">APOENA</a></p>
 
 </header>
 
 
 <h2 id="o-que-é-o-apoena">O que é o APOENA</h2>
-<p>O Projeto APOENA - Rede de Diagnóstico e Avaliação de Políticas e Ações Culturais - foco RJ é uma de rede multidisciplinar e multi-institucional destinada ao estudo de ações culturais em seus diferentes níveis; sejam eles, sociais, econômicos, políticos, institucionais, normativos ou formacionais. O nome APOENA vem do tupi-guarani, e significa “aquele que enxerga longe”.</p>
-<p><a href="https://apoenaredecultural.wordpress.com/">Clique aqui e saiba mais</a></p>
+<p>O Projeto APOENA - Rede de Diagnóstico e Avaliação de Políticas e
+Ações Culturais - foco RJ é uma de rede multidisciplinar e
+multi-institucional destinada ao estudo de ações culturais em seus
+diferentes níveis; sejam eles, sociais, econômicos, políticos,
+institucionais, normativos ou formacionais. O nome APOENA vem do
+tupi-guarani, e significa “aquele que enxerga longe”.</p>
+<p><a href="https://apoenaredecultural.wordpress.com/">Clique aqui e
+saiba mais</a></p>
 <h1 id="linha-do-tempo">Linha do Tempo</h1>
 <ul>
-<li><a href="https://apoena-uff.github.io/dados/linha-tempo/">Linha do Tempo</a></li>
+<li><a href="https://apoena-uff.github.io/dados/linha-tempo/">Linha do
+Tempo</a></li>
 </ul>
 <h1 id="mapas">Mapas</h1>
 <h4 id="fonte-plataforma-brasil">Fonte: Plataforma +Brasil</h4>
-<p>Mapa do percentual de execução da Lei Aldir Blanc no estado do Rio de Janeiro.<br />
+<p>Mapa do percentual de execução da Lei Aldir Blanc no estado do Rio de
+Janeiro.<br />
 - <a href="mapa1/index.html">RJ por município</a></p>
+<p>Mapa da execução da Lei Aldir Blanc.<br />
+- <a href="mapa3/index.html">Brasil por UF</a></p>
 <h1 id="gráficos">Gráficos</h1>
 <ul>
-<li><a href="https://labacuff.wordpress.com/">em breve</a></li>
+<li><a href="tabela_lab/tabela_LAB.html">Tabela LAB</a></li>
 </ul>
 <h2 id="outros-links">Outros links</h2>
 <ul>
 <li><p><a href="https://apoenaredecultural.wordpress.com/">APOENA</a></p></li>
 <li><p><a href="https://labacuff.wordpress.com/">LABAC UFF</a></p></li>
+<li><p><a href="https://apoena-uff.github.io/dados/twitter/index.html">Apresentação
+Enecult 2022</a></p></li>
 </ul>
 
 </main>
