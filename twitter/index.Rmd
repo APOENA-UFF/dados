@@ -294,13 +294,13 @@ gitlink::ribbon_css("https://apoenaredecultural.wordpress.com/",
 
 # Limpeza dos dados
 
-Banco com **44.123 registros**, com informações repetidas e homenagem ao compositor Aldir Blanc que não estavam relacionadas com a Lei.  
+No banco de dados de **44.123 registros**, identificamos informações repetidas.
 
 Principais etapas    
 1 – Remoção de tweets com a frase “morte do Aldir Blanc” ou “homenagem ao Aldir Blanc”;  
 2 – Remoção de tweets com menos de 10 caracteres;   
 3 – Remoção de tweets que tratavam sobre o artista Aldir Blanc e não sobre a Lei Aldir Blanc. Um exemplo disso é a conta do tweet 'VascodaGama', que fez algumas homenagens ao vascaíno Aldir Blanc e não tratava da Lei.   
-4 – O Tweet tem uma limitação de 280 caracteres. Isso faz com que os autores dos textos abreviem ao máximo as palavras. Assim, foram corrigidas, por exemplo: "qnd", ”vc”, ”q”, “pra” foram corridas para: “quando”, “você”, “que” e “para”.    
+4 – O Tweet tem uma limitação de 280 caracteres. Isso faz com que os autores dos textos abreviem ao máximo as palavras. Assim, foram corrigidas abreviações ("qnd", ”vc”, ”q”, “pra”) para: (“quando”, “você”, “que” e “para”).    
 
 
 ---
@@ -501,9 +501,9 @@ most_retweeted_tweet %>% gt() %>%
 
 # Discussão
 
-### 1. Apesar ser uma lei do setor cultural, a quantidade de favoritos e retweets está relacionada a políticos e não aos artistas (apropriação por parte dos politicos da visibilidade da LAB)
+### 1. Apesar de ser uma lei do setor cultural, a quantidade de favoritos e retweets está relacionada a políticos e não aos artistas (apropriação por parte dos politicos da visibilidade da LAB)
 <br>
-### 2. Evidências de tentativas de relacionar a LAB a uma Guerra Cultural
+### 2. Encontramos evidências de atores políticos relacionando a LAB a uma Guerra Cultural
 
 ---
 
@@ -520,21 +520,21 @@ knitr::include_graphics("img/nevem_e_freq.png")
 
 ## Conclusão
 
-* análise das postagens compartilhadas em **17.965 tweets**, no período de 22/03/2021 a 22/02/2022 em torno da LAB.
+* Análise das postagens compartilhadas em **17.965 tweets**, no período de 22/03/2021 a 22/02/2022 em torno da LAB.
 
-* identificamos o **engajamento de artistas** e demais trabalhadores do setor cultural que se juntaram numa intensa mobilização para aprovar, sancionar e executar a LAB durante a pandemia (constatado nas hashtags #DerrubaVetoLeiAldirBlanc, #LabProrrogaPraValer e #MaisTempoParaCultura). 
+* Identificamos o **engajamento de artistas** e demais trabalhadores do setor cultural que se juntaram numa intensa mobilização para aprovar, sancionar e executar a LAB durante a pandemia (constatado nas hashtags #DerrubaVetoLeiAldirBlanc, #LabProrrogaPraValer e #MaisTempoParaCultura). 
 
-* a direita concentra a sua fala sobre veto e sobre o Olavo de Carvalho, enquanto a esquerda fala da origem de criação, em seus processos de autoria, relatoria e aprovação da LAB. 
+* A direita concentra a sua fala sobre veto e sobre o Olavo de Carvalho, enquanto a esquerda fala da origem de criação, em seus processos de autoria, relatoria e aprovação da LAB. 
 
 ---
 
 ## Conclusão
 
-* mesmo **NÃO sendo os criadores, autores e sequer relatores da LAB**, Frias e Zambelli, conforme vimos, reúnem a maior quantidade de tweets postados nas redes sociais para incitar a guerra cultural, por meio da censura, a exemplo do ocorrido com o projeto Roda Bixa.
+* Mesmo **NÃO sendo os criadores, autores e sequer relatores da LAB**, Mário Frias e Carla Zambelli, conforme vimos, reúnem a maior quantidade de tweets postados nas redes sociais para incitar a guerra cultural, por meio da censura, a exemplo do ocorrido com o projeto Roda Bixa.
 
 
-* devemos observar o papel estratégico da comunicação e da cultura, tendo a linguagem, a palavra, como elemento de interseção, nesse caso, nas disputas de narrativas, com o uso da plataforma do Twitter como instrumento de **busca da hegemonia** de uma determinada ideologia e de controle da opinião pública nacional. 
+* Devemos observar o papel estratégico da comunicação e da cultura, tendo a linguagem, a palavra, como elemento de intersecção, nesse caso, nas disputas de narrativas, com o uso da plataforma do Twitter como instrumento de **busca da hegemonia** de uma determinada ideologia e de controle da opinião pública nacional. 
 
-* a comunicação esta sendo utilizada, com uma boa dosagem de desinformação, para **promover a guerra cultural**, de cunho ideológico, usada para desqualificar o inimigo, nesse caso, a esquerda.
+* A comunicação esta sendo utilizada, com uma boa dosagem de desinformação, para **promover a guerra cultural**, de cunho ideológico, usada para desqualificar o inimigo, nesse caso, a esquerda.
 
 
