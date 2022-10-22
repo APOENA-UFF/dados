@@ -39,6 +39,8 @@ Mapa do percentual de execução da Lei Aldir Blanc no estado do Rio de Janeiro.
 Mapa da execução da Lei Aldir Blanc.    
 - [Brasil por UF](mapa3/index.html)
 
+Mapa do Boletim 4 (2020 até 2022)
+- [Rio por município](mapa3/mapa_03.html)
 
 # Gráficos
 - [Tabela LAB](tabela_lab/tabela_LAB.html)
