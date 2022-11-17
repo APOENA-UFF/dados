@@ -42,6 +42,9 @@ Mapa da execução da Lei Aldir Blanc.
 Mapa do Boletim 4 (2020 até 2022)
 - [Rio por município](mapa3/mapa_03.html)
 
+Mapa do Boletim 4 (2020 até 2022)
+- [Rio por município](mapa4/mapa_04.html)
+
 # Gráficos
 - [Tabela LAB](tabela_lab/tabela_LAB.html)
 
@@ -55,3 +58,4 @@ Mapa do Boletim 4 (2020 até 2022)
 
 - [Apresentação Enecult 2022](https://apoena-uff.github.io/dados/twitter/index.html)
 
+- [Apresentação 2022](https://apoena-uff.github.io/dados/googlenews/index.html)
