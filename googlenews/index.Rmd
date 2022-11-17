@@ -276,9 +276,11 @@ gitlink::ribbon_css("https://apoenaredecultural.wordpress.com/",
 
 ---
 
-# Guerra Cultural
+# Google News
 
-> “Pré-candidato à Presidência da República, o deputado federal Jair Bolsonaro (PSC-RJ), antecipou nosso presente sombrio: Mas vamos até o fim! Há algo maior que eleição em jogo: a derrubada da hegemonia cultural da esquerda no Brasil” (ROCHA, 2021, p. 107).
+> Google News é um agregador de notícias e aplicativo desenvolvido pela Google.   
+  
+> Ele apresenta um fluxo contínuo e personalizável de artigos organizados a partir de milhares de editores e revistas. 
 
 
 ---
@@ -286,30 +288,26 @@ gitlink::ribbon_css("https://apoenaredecultural.wordpress.com/",
 # Método
 
 
-## Coleta de dados via API do Twitter
-### Coleta de dados 3.200 postagens por 7 dias durante 48 semanas
-### Período: entre 22/03/2021 e 22/02/2022
+## Coleta de dados via Google News
 
-
----
-
-# Limpeza dos dados
-
-No banco de dados de **44.123 registros**, identificamos informações repetidas.
-
-Principais etapas    
-1 – Remoção de tweets com a frase “morte do Aldir Blanc” ou “homenagem ao Aldir Blanc”;  
-2 – Remoção de tweets com menos de 10 caracteres;   
-3 – Remoção de tweets que tratavam sobre o artista Aldir Blanc e não sobre a Lei Aldir Blanc. Um exemplo disso é a conta do tweet 'VascodaGama', que fez algumas homenagens ao vascaíno Aldir Blanc e não tratava da Lei.   
-4 – O Tweet tem uma limitação de 280 caracteres. Isso faz com que os autores dos textos abreviem ao máximo as palavras. Assim, foram corrigidas abreviações ("qnd", ”vc”, ”q”, “pra”) para: (“quando”, “você”, “que” e “para”).    
-
+### Coleta de dados matérias do Google News com a expressão Lei Aldir Blanc durante 82 semanas
+### Período: entre 25/02/2021 e 15/11/2022
+### Ferramentas Python & R
 
 ---
 
 # Limpeza dos dados
 
-### Em função disso, obtivemos, após a limpeza, um banco de dados com 17.965 tweets únicos na versão final. 
+### 55.062 links do google news sobre a Lei Aldir Blanc,  
+### 4.353 links tinham títulos,  
+### Retiradas as matérias internacionais,   
+### Retiradas as matérias repetidas (o jornal republica a mesma matéria, e   
 
+---
+
+# Limpeza dos dados
+
+### Em função disso, obtivemos, após a limpeza, um banco de dados com 2.626 matérias únicas. 
 <br>
 
 ### O mesmo procedimento foi realizado com o termo de busca “Lei Paulo Gustavo”.
@@ -318,14 +316,19 @@ Principais etapas
 
 # Método
 
-### Contagem dos emojis utilizados em cada um dos 17.965 tweets. 
-### Contagem de tweets por autor
-### Contagem das hashtags, 
-### Contagem de favoritos, 
-### Contagem dos retweets, 
-### Contagem das marcações,
-### Contagem dos links mais compartilhados. 
+## Análise quantitativa de textos
+### Nível Macro
+### Frequência da Origem de cada artigo;
+> Congresso em Foco, Catraca Livre, DeOlhoNailha,Outracoisa, Folha de Pernambuco
 
+### Frequência do Eixo (esquerda/direita) de cada artigo 
+> CartaCapital,PT,PCdoB, Brasil 247,Mídia Ninja, Brasil de Fato, Le Monde Diplomatique Brasil, -> ESQUERDA   
+> O Antagonista, Valor Econômico, Jovem Pan, R7, ISTOÉ, Istoé Dinheiro, CNN Brasil, Estadão, VEJA, Veja Rio, -> DIREITA
+
+### Nível Micro
+### Frequência de cada palavra
+### Frequência de cada palavra por origem
+### Frequência de cada palavra por eixo
 
 ---
 
