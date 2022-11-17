@@ -287,7 +287,6 @@ gitlink::ribbon_css("https://apoenaredecultural.wordpress.com/",
 
 # Método
 
-
 ## Coleta de dados via Google News
 
 ### Coleta de dados matérias do Google News com a expressão Lei Aldir Blanc durante 82 semanas
