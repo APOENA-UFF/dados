@@ -358,22 +358,20 @@ Modelagem de Tópicos é uma forma de identificar padrões em um corpus. A abord
 ---
 class: center
 
-### Tabela 1 – Emojis mais utilizados
+### Tabela 1 – Matérias sobre a LAB
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
-#knitr::include_graphics("img/mosaico.png")
-
-
-
-load("C:/Users/Hp/Documents/GitHub/DADOS_APOENA/twitter/dados/top_10_emojis.RData")
-
 library(dplyr)
 library(gt)
-top_10_emojis %>% select(unicode,n) %>% gt() %>% 
+dados = readRDS(file=paste0(getwd(),'/dados/dados_google_new_LAB_UNIRIO_3_11_2022.Rds'))
+dados = dados %>% distinct(title, .keep_all = TRUE)
+
+set.seed(12345)
+dados %>% sample_n(20) %>% select(title,site) %>% gt() %>% 
   tab_options(table_body.hlines.color = "lightgrey") %>%
   cols_label(
-    unicode = "Emoji",
-    n = "Quantidade"
+    title = "Titulo",
+    site = "fonte"
   )  %>%
   tab_style(
     style = cell_text(weight = "bold"),
@@ -382,55 +380,7 @@ top_10_emojis %>% select(unicode,n) %>% gt() %>%
 
 ```
 
----
-class: center
 
-### Tabela 2 – Hashtags mais utilizadas
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
-load("C:/Users/Hp/Documents/GitHub/DADOS_APOENA/twitter/dados/top_hashtags.RData")
-top_hashtags <-top_hashtags %>% filter(hashtag!='#lei')
-top_hashtags <-top_hashtags[1:10,]
-
-top_hashtags %>% gt() %>% 
-  tab_options(table_body.hlines.color = "lightgrey") %>%
-  cols_label(
-    hashtag = "Hashtag",
-    n = "Quantidade"
-  )  %>%
-  tab_style(
-    style = cell_text(weight = "bold"),
-    locations = cells_column_spanners(spanners = everything())
-  ) 
-
-```
-
----
-class: center
-
-### Tabela 3 – Os tweets favoritos 
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
-
-load("C:/Users/Hp/Documents/GitHub/DADOS_APOENA/twitter/dados/most_liked_tweet.RData")
-
-most_liked_tweet <-most_liked_tweet %>% select(screen_name,text,favorite_count)
-most_liked_tweet <-most_liked_tweet[1:10,]
-
-most_liked_tweet %>% gt() %>% 
-  tab_options(table_body.hlines.color = "lightgrey") %>%
-  cols_label(
-    screen_name = "Nome",
-    text = "Texto",
-    favorite_count = "Favorito"
-  )  %>%
-  tab_style(
-    style = cell_text(weight = "bold"),
-    locations = cells_column_spanners(spanners = everything())
-  ) 
-
-
-```
 
 
 ---
@@ -438,8 +388,7 @@ class: center
 
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
-knitr::include_graphics("img/CarlaZambelli38_1.png")
-
+knitr::include_graphics("img/neutra.png")
 
 ```
 
@@ -450,19 +399,7 @@ class: center
 
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
-knitr::include_graphics("img/CarlaZambelli38_1.png")
-
-
-```
-
-
----
-class: center
-
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
-knitr::include_graphics("img/mfriasoficial_2.png")
-
+knitr::include_graphics("img/positiva1.png")
 
 ```
 
@@ -472,8 +409,18 @@ class: center
 
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
-knitr::include_graphics("img/MarceloFreixo_3.png")
 
+knitr::include_graphics("img/positiva.png")
+
+```
+
+
+---
+class: center
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+knitr::include_graphics("img/negativa1.png")
 
 ```
 
@@ -484,52 +431,29 @@ class: center
 
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
-knitr::include_graphics("img/mfriasoficial_4.png")
 
+knitr::include_graphics("img/negativa.png")
 
 ```
-
 
 ---
 class: center
 
-### Tabela 4 – O mesmo acontece com os retweets
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
-
-load("C:/Users/Hp/Documents/GitHub/DADOS_APOENA/twitter/dados/most_retweeted_tweet.RData")
-most_retweeted_tweet <-most_retweeted_tweet %>% select(screen_name,text,retweet_count)
-most_retweeted_tweet <-most_retweeted_tweet[1:10,]
-
-most_retweeted_tweet %>% gt() %>% 
-  tab_options(table_body.hlines.color = "lightgrey") %>%
-  cols_label(
-    screen_name = "Nome",
-    text = "Texto",
-    retweet_count = "Retweets"
-  )  %>%
-  tab_style(
-    style = cell_text(weight = "bold"),
-    locations = cells_column_spanners(spanners = everything())
-  ) 
-
-```
 
 
 ---
 
 # Discussão
 
-### 1. Apesar de ser uma lei do setor cultural, a quantidade de favoritos e retweets está relacionada a políticos e não aos artistas (apropriação por parte dos politicos da visibilidade da LAB)
+### REFAZER 1. Apesar de ser uma lei do setor cultural, a quantidade de favoritos e retweets está relacionada a políticos e não aos artistas (apropriação por parte dos politicos da visibilidade da LAB)
 <br>
-### 2. Encontramos evidências de atores políticos relacionando a LAB a uma Guerra Cultural
+### REFAZER 2. Encontramos evidências de atores políticos relacionando a LAB a uma Guerra Cultural
 
 ---
 
 
-
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
-knitr::include_graphics("img/nevem_e_freq.png")
+# knitr::include_graphics("img/nevem_e_freq.png")
 
 
 ```
