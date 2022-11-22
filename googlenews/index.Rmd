@@ -300,7 +300,7 @@ gitlink::ribbon_css("https://apoenaredecultural.wordpress.com/",
 ### 55.062 links do google news sobre a Lei Aldir Blanc,  
 ### 4.353 links tinham títulos,  
 ### Retiradas as matérias internacionais,   
-### Retiradas as matérias repetidas (o jornal republica a mesma matéria, e   
+### Retiradas as matérias repetidas (o jornal republica a mesma matéria)
 
 ---
 
@@ -313,30 +313,46 @@ gitlink::ribbon_css("https://apoenaredecultural.wordpress.com/",
 
 ---
 
-# Método
+### Método - Análise quantitativa de textos
+####  Nível Macro
+Frequência da Origem de cada artigo;
+> Congresso em Foco, Catraca Livre, DeOlhoNailha, Outracoisa, Folha de Pernambuco
 
-## Análise quantitativa de textos
-### Nível Macro
-### Frequência da Origem de cada artigo;
-> Congresso em Foco, Catraca Livre, DeOlhoNailha,Outracoisa, Folha de Pernambuco
-
-### Frequência do Eixo (esquerda/direita) de cada artigo 
+Frequência do Eixo (esquerda/direita) de cada artigo 
 > CartaCapital,PT,PCdoB, Brasil 247,Mídia Ninja, Brasil de Fato, Le Monde Diplomatique Brasil, -> ESQUERDA   
 > O Antagonista, Valor Econômico, Jovem Pan, R7, ISTOÉ, Istoé Dinheiro, CNN Brasil, Estadão, VEJA, Veja Rio, -> DIREITA
 
-### Nível Micro
-### Frequência de cada palavra
-### Frequência de cada palavra por origem
-### Frequência de cada palavra por eixo
 
 ---
 
+# Método
+
+## Análise quantitativa de textos
+#### Nível Micro
+1. Frequência de cada palavra
+2. Frequência de cada palavra por origem
+3. Frequência de cada palavra por eixo
+
+---
+
+# Análise de sentimento 
+A análise de sentimentos é o uso de processamento de linguagem natural, análise de texto para identificar, extrair, quantificar e estudar sistematicamente estados afetivos e informações subjetivas (Positivo/Negativo). 
+
+---
+
+# Modelagem de tópicos
+
+O Que é modelagem de tópicos?
+
+Modelagem de Tópicos é uma forma de identificar padrões em um corpus. A abordagem gera grupos de palavras a respeito do corpus distribuídas em “tópicos”. Miriam Posner descreve a modelagem de tópicos como “um método para achar clusters de palavras (chamado “tópicos” de forma abreviada) em grandes corpos de texto. ” (GRUPOS DE PALAVRAS)
+
+
+---
+
+
 # Resultados encontrados
 
-## Emojis mais utilizados
-## Hashtags mais utilizadas
-## Tweets favoritos
-## Retweets
+
 
 
 ---
@@ -541,3 +557,4 @@ knitr::include_graphics("img/nevem_e_freq.png")
 * A comunicação esta sendo utilizada, com uma boa dosagem de desinformação, para **promover a guerra cultural**, de cunho ideológico, usada para desqualificar o inimigo, nesse caso, a esquerda.
 
 
+[1] http://miriamposner.com/blog/?p=1335

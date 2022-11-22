@@ -177,6 +177,86 @@ class: center, middle
   .ribbon {opacity:0.6;transition:opacity 0s ease 0s;}
 &lt;/style&gt;
 
+
+---
+
+# Google News
+
+&gt; Google News é um agregador de notícias e aplicativo desenvolvido pela Google.   
+  
+&gt; Ele apresenta um fluxo contínuo e personalizável de artigos organizados a partir de milhares de editores e revistas. 
+
+
+---
+
+# Método
+
+
+## Coleta de dados via Google News
+
+### Coleta de dados matérias do Google News com a expressão Lei Aldir Blanc durante 82 semanas
+### Período: entre 25/02/2021 e 15/11/2022
+### Ferramentas Python &amp; R
+
+---
+
+# Limpeza dos dados
+
+### 55.062 links do google news sobre a Lei Aldir Blanc,  
+### 4.353 links tinham títulos,  
+### Retiradas as matérias internacionais,   
+### Retiradas as matérias repetidas (o jornal republica a mesma matéria)
+
+---
+
+# Limpeza dos dados
+
+### Em função disso, obtivemos, após a limpeza, um banco de dados com 2.626 matérias únicas. 
+&lt;br&gt;
+
+### O mesmo procedimento foi realizado com o termo de busca “Lei Paulo Gustavo”.
+
+---
+
+### Método - Análise quantitativa de textos
+####  Nível Macro
+Frequência da Origem de cada artigo;
+&gt; Congresso em Foco, Catraca Livre, DeOlhoNailha, Outracoisa, Folha de Pernambuco
+
+Frequência do Eixo (esquerda/direita) de cada artigo 
+&gt; CartaCapital,PT,PCdoB, Brasil 247,Mídia Ninja, Brasil de Fato, Le Monde Diplomatique Brasil, -&gt; ESQUERDA   
+&gt; O Antagonista, Valor Econômico, Jovem Pan, R7, ISTOÉ, Istoé Dinheiro, CNN Brasil, Estadão, VEJA, Veja Rio, -&gt; DIREITA
+
+
+---
+
+# Método
+
+## Análise quantitativa de textos
+#### Nível Micro
+1. Frequência de cada palavra
+2. Frequência de cada palavra por origem
+3. Frequência de cada palavra por eixo
+
+---
+
+# Análise de sentimento 
+A análise de sentimentos é o uso de processamento de linguagem natural, análise de texto para identificar, extrair, quantificar e estudar sistematicamente estados afetivos e informações subjetivas (Positivo/Negativo). 
+
+---
+
+# Modelagem de tópicos
+
+O Que é modelagem de tópicos?
+
+Modelagem de Tópicos é uma forma de identificar padrões em um corpus. A abordagem gera grupos de palavras a respeito do corpus distribuídas em “tópicos”. Miriam Posner descreve a modelagem de tópicos como “um método para achar clusters de palavras (chamado “tópicos” de forma abreviada) em grandes corpos de texto. ” (GRUPOS DE PALAVRAS)
+
+
+---
+
+
+# Resultados encontrados
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="libs/remark-latest.min.js"></script>
