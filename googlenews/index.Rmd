@@ -26,7 +26,7 @@ options(htmltools.dir.version = FALSE)
 library(xaringanthemer)
 style_duo_accent(
   # primary_color = "#345865",
-  primary_color = "#B56B6F",
+  primary_color = "#d18513",
   secondary_color = "#2c8475",
   black_color = "#4242424",
   white_color = "#FFF",
@@ -282,6 +282,25 @@ gitlink::ribbon_css("https://apoenaredecultural.wordpress.com/",
   
 > Ele apresenta um fluxo contínuo e personalizável de artigos organizados a partir de milhares de editores e revistas. 
 
+---
+
+# Giro linguístico
+
+O impacto das linguagens estruturadas em matérias 
+1. Os discursos nas mídias são práticas sociais.
+2. Dar uma atenção maior ao papel desempenhado pelas linguagem nas mídias.
+3. Desenvolver um método para avaliar a linguagem das mídias - uma maneira de relatar uma percepção da LAB
+
+
+---
+
+# Giro linguístico
+
+Mais do que meramente descritiva, a linguagem nas notícias se institui como uma ação sobre o mundo   
+A linguagem nas notícias é constitutiva da realidade?   
+A linguagem nas notícias é um instrumento para atuar sobre o mundo?   
+Entender o contexto social da LAB, mas como também de se escreve, fala, e constitui a narrativa.    
+Todos discursos nas mídias têm um contexto de produção.   
 
 ---
 
@@ -335,21 +354,6 @@ Frequência do Eixo (esquerda/direita) de cada artigo
 
 ---
 
-# Análise de sentimento 
-A análise de sentimentos é o uso de processamento de linguagem natural, análise de texto para identificar, extrair, quantificar e estudar sistematicamente estados afetivos e informações subjetivas (Positivo/Negativo). 
-
----
-
-# Modelagem de tópicos
-
-O Que é modelagem de tópicos?
-
-Modelagem de Tópicos é uma forma de identificar padrões em um corpus. A abordagem gera grupos de palavras a respeito do corpus distribuídas em “tópicos”. Miriam Posner descreve a modelagem de tópicos como “um método para achar clusters de palavras (chamado “tópicos” de forma abreviada) em grandes corpos de texto. ” (GRUPOS DE PALAVRAS)
-
-
----
-
-
 # Resultados encontrados
 
 
@@ -399,17 +403,6 @@ class: center
 
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
-knitr::include_graphics("img/positiva1.png")
-
-```
-
-
----
-class: center
-
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
-
 knitr::include_graphics("img/positiva.png")
 
 ```
@@ -420,7 +413,18 @@ class: center
 
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
-knitr::include_graphics("img/negativa1.png")
+
+knitr::include_graphics("img/positiva2.png")
+
+```
+
+
+---
+class: center
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+knitr::include_graphics("img/negativa.png")
 
 ```
 
@@ -432,49 +436,207 @@ class: center
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
 
-knitr::include_graphics("img/negativa.png")
+knitr::include_graphics("img/negativa2.png")
 
 ```
+
+
+
+
+---
+class: center
+
+### Tabela 2 – Matérias sobre a LAB
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+library(dplyr)
+library(gt)
+dados2 = readRDS(file=paste0(getwd(),'/dados/dados_para_tabela.Rds'))
+
+set.seed(12345)
+dados2 %>% filter(origem!='outro') %>% select(origem) %>% 
+  table()%>% data.frame() %>% gt() %>% 
+  tab_options(table_body.hlines.color = "lightgrey") %>%
+  cols_label(
+    origem = "Grupo",
+    Freq = "Quantidade"
+  )  %>%
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_column_spanners(spanners = everything())
+  ) 
+
+```
+
+
+
+
 
 ---
 class: center
 
 
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+
+knitr::include_graphics("img/nevem_e_freq.png")
+
+```
+
+
+---
+
+# Análise de frequência relativa
+
+Pontuação para identificar palavras frequentes em documentos em um grupo de destino e de referência.
+
+Frequência de palavras que estão mais em um grupo do que em outro
+
+---
+class: center
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+knitr::include_graphics("img/Senado_zoom.png")
+```
+
+
+---
+class: center
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+knitr::include_graphics("img/Deputados_zoom.png")
+```
+
+---
+class: center
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+knitr::include_graphics("img/Prefeitura_zoom.png")
+```
+
+---
+class: center
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+knitr::include_graphics("img/Estados_zoom.png")
+```
+
+---
+class: center
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+knitr::include_graphics("img/EBC_Agencia_Brasil_zoom.png")
+```
+
+---
+class: center
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+knitr::include_graphics("img/Blog_Midia_Alternativa_zoom.png")
+```
+---
+class: center
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+knitr::include_graphics("img/Midia_Tradicional_zoom.png")
+```
+
+---
+# Análise de sentimento  
+A análise de sentimentos é o uso de processamento de linguagem natural, análise de texto para identificar, extrair, quantificar e estudar sistematicamente estados afetivos e informações subjetivas (Positivo/Negativo). 
+  
+  
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+library(lexiconPT)
+selecao = c('abelhudo','reeleito','aborrecer-se','afectuoso','afirmativo')
+
+sent = lexiconPT::sentiLex_lem_PT02
+tabela_sent = sent %>% filter(term%in%selecao)  %>% select(term,grammar_category,polarity)%>% gt() %>% 
+  tab_options(table_body.hlines.color = "lightgrey") %>%
+  cols_label(
+    term = "termo",
+    grammar_category = "categoria",
+    polarity="polaridade"
+  )  %>%
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_column_spanners(spanners = everything())
+  ) 
+tabela_sent
+```
+
+
+---
+class: center
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center',out.width=800,out.height=600}
+knitr::include_graphics("img/sentimento_midia_alternativa.png")
+```
+
+---
+class: center
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center',out.width=800,out.height=600}
+knitr::include_graphics("img/sentimento_midia_tradicional.png")
+```
+
+
+---
+
+# Modelagem de tópicos
+
+### O que é modelagem de tópicos?
+
+Modelagem de Tópicos é uma forma de identificar padrões em um *corpus*. A abordagem gera grupos de palavras a respeito do corpus distribuídas em “tópicos”. Miriam Posner descreve a modelagem de tópicos como “um método para achar clusters de palavras (chamado “tópicos”) em *corpus*.” (GRUPOS DE PALAVRAS)
+
+
+---
+class: center
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center',out.width=800,out.height=600}
+library(readxl)
+topic <- read_excel("img/topic_model_metodo2.xlsx")
+topic %>% gt() %>% 
+  tab_options(table_body.hlines.color = "lightgrey") %>%
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_column_spanners(spanners = everything())
+  ) 
+```
+
+
+---
+class: center
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center',out.width=800,out.height=600}
+knitr::include_graphics("img/topicmodel_2.jpeg")
+```
 
 ---
 
 # Discussão
 
-### REFAZER 1. Apesar de ser uma lei do setor cultural, a quantidade de favoritos e retweets está relacionada a políticos e não aos artistas (apropriação por parte dos politicos da visibilidade da LAB)
+### Apesar de ser uma lei do setor cultural, teve impacto em toda sociedade (Legislativo, Municípios, Estados, Blogs, mídia alternativa, mídia tradicional)
 <br>
-### REFAZER 2. Encontramos evidências de atores políticos relacionando a LAB a uma Guerra Cultural
+<br>
+### Encontramos evidências de discursos da esquerda e da direita sobre o impacto da LAB na sociedade
 
 ---
 
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
-# knitr::include_graphics("img/nevem_e_freq.png")
-
-
-```
-
-
----
 
 ## Conclusão
 
-* Análise das postagens compartilhadas em **17.965 tweets**, no período de 22/03/2021 a 22/02/2022 em torno da LAB.
+* Análise das postagens compartilhadas em **4.353 matérias**, no período de 25/02/2021 e 15/11/2022 em torno da LAB.
 
-* Identificamos o **engajamento de artistas** e demais trabalhadores do setor cultural que se juntaram numa intensa mobilização para aprovar, sancionar e executar a LAB durante a pandemia (constatado nas hashtags #DerrubaVetoLeiAldirBlanc, #LabProrrogaPraValer e #MaisTempoParaCultura). 
+* Identificamos uma distinção entre o **Estado**, **Mídia Corporativa** e **Mídia alternativa** . 
 
-* A direita concentra a sua fala sobre veto à Lei, enquanto a esquerda fala da origem de criação, em seus processos de autoria, relatoria e aprovação da LAB. 
+* A **direita** concentra a sua fala sobre ???, enquanto a **esquerda** fala de ????a origem de criação, em seus processos de autoria, relatoria e aprovação da LAB. 
 
 ---
 
-## Conclusão
+## Conclusão REESCREVER
 
 * Mesmo **NÃO sendo os criadores, autores e sequer relatores da LAB**, Mário Frias e Carla Zambelli, conforme vimos, reúnem a maior quantidade de tweets postados nas redes sociais (guerra cultural e censura do projeto Roda Bixa).
-
 
 * Devemos observar o papel estratégico da comunicação e da cultura, tendo a linguagem, a palavra, como elemento de intersecção, nesse caso, nas disputas de narrativas, com o uso da plataforma do Twitter como instrumento de **busca da hegemonia** de uma determinada ideologia e de controle da opinião pública nacional. 
 
